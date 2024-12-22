@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bulb on bulb off</title>
+</head>
+<body>
+	<img id="img1" src="bulb1.gif">
+    <p>Click on the bulb to toggle it's state</p>
+
+	<script type="text/javascript">
+		var img1 = document.getElementById("img1");
+		img1.onclick = function(){
+			if(img1.src.match("bulb1")) {
+				img1.src = "bulb2.gif";
+			}else{
+				img1.src = "bulb1.gif";
+			}
+		}
+	</script>
+</body>
+</html>

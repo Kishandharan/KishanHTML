@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the independence day</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu Sans">
+    <style>
+        body{
+            margin: 0;
+            background: url("bgimg3.jpeg");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        *{
+            font-family: "Ubuntu Sans";
+        }
+
+        h1{
+            padding: 10px;
+            margin: 0;
+            display: inline-block;
+            width: 30%;
+            color: white;
+        }
+
+        pre{
+            font-size: larger;
+            line-height: 30px;
+            color: white;
+        }
+
+        .leftmar{
+            margin-left: 20px;
+            width: 90%;
+        }
+
+        .backblur{
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            white-space: pre-wrap; 
+            word-wrap: break-word; 
+        }
+
+        li{
+            line-height: 5px;
+        }
+
+        ul{
+            margin: 0;
+        }
+
+        img{
+            width: 100px;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>Independence day</h1>
+    <div class="leftmar">
+        <pre class="backblur">
+Independence day is the day when india got freedom from British.
+The date when india got freedom from british is 15th-Aug.
+The british ruled the india for almost 86 years!
+Which stated at 1858 and ended at 1947.
+<table>
+    <tr>
+        <td class="image" id="img1"></td>
+        <td class="name" id="name1"></td>        
+    </tr>
+    <tr>
+        <td class="image" id="img2"></td>
+        <td class="name" id="name2"></td>
+    </tr>
+</table>
+        </pre>
+    </div>
+
+    <script>
+        let arr1 = ["Jawaharlal_Nehru", "Bhagat_Singh"];
+        let td_imgs = document.getElementsByClassName("image");
+        let td_name = document.getElementsByClassName("name");
+        let exts = [".jpeg", ".jpg"];
+        let count = 0;
+        for(let i=0; i<td_imgs.length; i++){
+            let img_id = td_imgs[i].id;
+            console.log(img_id);
+            let name_id = td_name[i].id;
+            document.getElementById(img_id).innerHTML = `<img src='${arr1[count]+exts[count]}'>`;
+            document.getElementById(name_id).textContent = arr1[count];
+            count++;
+        }
+    </script>
+</body>
+</html>

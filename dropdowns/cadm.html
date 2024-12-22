@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Top Menu with custom dropdown in html</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+	<style>
+		.topmenu{
+			background-color: #fa4605;
+			padding: 10px;
+			font-size: 30px;
+			color: white;
+			display: flex;
+			gap: 20px;
+			font-family: "Rubik";
+		}
+
+		.topmenu span{
+			transition: 500ms;
+		}
+
+		.topmenu span:hover{
+			color: #01148a;
+		}
+
+		.items{
+			color: white;
+			position: absolute;
+			background-color: #fa4605;
+			padding: 10px;
+			display: none;
+		}
+
+		.items p{
+			transition: 500ms;
+		}
+
+		.items p:hover{
+			color: #01148a;
+		}
+
+		.dropdown:hover .items{
+			display: block;
+		}
+
+		body{
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="topmenu">
+		<span>Home</span>	
+		<span>Contact</span>
+		<span>Info</span>
+		<span class="dropdown">
+			Servers
+			<div class="items">
+				<p>Django Server</p>
+				<p>TecEcolocating Server</p>
+			</div>
+		</span>
+	</div>
+</body>
+</html>

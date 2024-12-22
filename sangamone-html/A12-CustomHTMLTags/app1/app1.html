@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom tags in html</title>
+</head>
+<body>
+    <greet-hello>Kishan</greet-hello>
+    <script>
+        class GreetHello extends HTMLElement{
+            connectedCallback(){
+                this.textContent = "Hello       " + this.textContent;
+                this.style.fontSize = "3rem";
+                this.style.color = "red";
+            }
+        }
+
+        customElements.define("greet-hello", GreetHello);
+
+    </script>    
+</body>
+</html>

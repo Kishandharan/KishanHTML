@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dot{
+            display: inline-block;
+            background-color: red;
+            height: 10px;
+            width: 10px;
+            position: relative;
+            border-radius: 50px;
+            animation: gdaup 5s linear infinite; 
+        }
+
+        .speed1{
+            animation: gdaup 5s linear infinite;
+        }
+
+        .speed2{
+            animation: gdaup 4s linear infinite;
+        }
+
+        .speed3{
+            animation: gdaup 3s linear infinite;
+        }
+
+        .speed4{
+            animation: gdaup 2s linear infinite;
+        }
+
+        .speed5{
+            animation: gdaup 1s linear infinite;
+        }
+
+        @keyframes gdaup {
+            0%{top: 0px; background-color: red;}
+            100%{top: 800px; background-color: purple;}
+        }
+    </style>
+</head>
+<body>
+    <div class="dot speed1"></div>
+    <div class="dot speed2"></div>
+    <div class="dot speed3"></div>
+    <div class="dot speed4"></div>
+    <div class="dot speed5"></div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+*{
+	font-family: "Calibri";
+}
+
+.header{
+	text-align: center;
+	font-size: 40px;
+}
+
+.theme1{
+	display: block;
+	text-align: center;
+	font-size: 30px;
+}
+
+.theme2{
+	text-align: center;
+}
+
+.email-address{
+	text-align: center;
+}

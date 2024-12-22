@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p data-count="1" id="p1">datacount1</p> 
+    <p data-count="2" id="p2">datacount2</p> 
+    <p data-count="3" id="p3">datacount3</p> 
+    <p data-count="4" id="p4">datacount4</p> 
+    <p data-count="5" id="p5">datacount5</p> 
+    <script>
+        for(let i = 1; i<=5; i++){
+            let data_count = document.getElementById(`p${i}`).dataset.count;
+            console.log(data_count);
+        }
+    </script>
+</body>
+</html>

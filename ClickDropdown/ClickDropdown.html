@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Click push dropdown</title>
+	<style type="text/css">
+		.dropdown{
+			width: 400px;
+			background-color: #1b211a;
+			color: white;
+			font-family: monospace;
+			font-size: 24px;
+		}
+
+		.dropdown .dropdown-btn{
+			background-color: #3a5736;
+			padding: 10px;
+		}
+
+		.dropdown .dropdown-content{
+			display: none;
+		}
+
+		.dropdown .dropdown-data{
+			padding: 10px;
+			line-height: 20px;
+		}
+
+		.dropdown .dropdown-data:hover{
+			background-color: white;
+			color: black;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="dropdown">
+		<div class="dropdown-btn" onclick="openlist()">List</div>	
+		<div class="dropdown-content" id="dropdown-content">
+			<div class="dropdown-data">Item1</div>
+			<div class="dropdown-data">Item2</div>
+			<div class="dropdown-data">Item3</div>			
+		</div>	
+	</div>
+
+	<script type="text/javascript">
+		function openlist() {
+			let dropdown_content = document.getElementById('dropdown-content');
+			if(dropdown_content.style.display == "none"){
+				dropdown_content.style.display = "block";
+			}else{
+				dropdown_content.style.display = "none";
+			}
+		}
+	</script>
+</body>
+</html>

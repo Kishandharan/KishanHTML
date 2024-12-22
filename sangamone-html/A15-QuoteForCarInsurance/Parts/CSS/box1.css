@@ -1,0 +1,14 @@
+.theme100 {
+	background-color: orange;
+	top:0;
+	left:0;
+	right:0;
+}
+.theme101{
+	margin-left:20%;
+	display:flex;
+	gap:20px;
+}
+body{
+	margin:0;
+}

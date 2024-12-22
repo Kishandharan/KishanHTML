@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chessboard</title>
+	<style>
+		:root{
+			--grey: #c9c9c9;
+		}
+
+		table{
+			background-color: black;
+		}
+
+		td{
+			background-color: white;
+			font-size: 3rem;
+			width: 60px;
+			height: 60px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<table class="table">
+		<tr>
+			<td id="td11"><span id="span11">&#9820;</span></td>
+			<td style="background: var(--grey);" id="td12"><span id="span12">&#9822;</span></td>
+			<td id="td13"><span id="span13">&#9821;</span></td>
+			<td style="background: var(--grey);" id="td14"><span id="span14">&#9818;</span></td>
+			<td id="td15"><span id="span15">&#9819;</span></td>
+			<td style="background: var(--grey);" id="td16"><span id="span16">&#9821;</span></td>
+			<td id="td17"><span id="span17">&#9822;</span></td>
+			<td style="background: var(--grey);" id="td18"><span id="span18">&#9820;</span></td>
+		</tr>
+		<tr>
+			<td style="background: var(--grey);" id="td21"><span id="span21">&#9823;</span></td>
+			<td id="td22"><span id="span22">&#9823;</span></td>
+			<td style="background: var(--grey);" id="td23"><span id="span23">&#9823;</span></td>
+			<td id="td24"><span id="span24">&#9823;</span></td>
+			<td style="background: var(--grey);" id="td25"><span id="span25">&#9823;</span></td>
+			<td id="td26"><span id="span26">&#9823;</span></td>
+			<td style="background: var(--grey);" id="td27"><span id="span27">&#9823;</span></td>
+			<td id="td28"><span id="td28">&#9823;</span></td>
+		</tr>
+		<tr>
+			<td id="td31"></td>
+			<td style="background: var(--grey);" id="td32"></td>
+			<td id="td33"></td>
+			<td style="background: var(--grey);" id="td34"></td>
+			<td id="td35"></td>
+			<td style="background: var(--grey);" id="td36"></td>
+			<td id="td37"></td>
+			<td style="background: var(--grey);" id="td38"></td>
+		</tr>
+		<tr>
+			<td style="background: var(--grey);" id="td41"></td>
+			<td></td>
+			<td style="background: var(--grey);"></td>
+			<td></td>
+			<td style="background: var(--grey);"></td>
+			<td></td>
+			<td style="background: var(--grey);"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td style="background: var(--grey);" id="td52"></td>
+			<td></td>
+			<td style="background: var(--grey);"></td>
+			<td></td>
+			<td style="background: var(--grey);"></td>
+			<td></td>
+			<td style="background: var(--grey);"></td>
+		</tr>
+		<tr>
+			<td style="background: var(--grey);"></td>
+			<td></td>
+			<td style="background: var(--grey);"></td>
+			<td></td>
+			<td style="background: var(--grey);"></td>
+			<td></td>
+			<td style="background: var(--grey);"></td>
+			<td id="td68"></td>
+		</tr>
+		<tr>
+			<td>&#9817;</td>
+			<td style="background: var(--grey);">&#9817;</td>
+			<td>&#9817;</td>
+			<td style="background: var(--grey);">&#9817;</td>
+			<td>&#9817;</td>
+			<td style="background: var(--grey);">&#9817;</td>
+			<td>&#9817;</td>
+			<td style="background: var(--grey);" id="td78"><span id="span78">&#9817;</span></td>
+		</tr>
+		<tr>
+			<td style="background: var(--grey);">&#9814;</td>
+			<td>&#9816;</td>
+			<td style="background: var(--grey);">&#9815;</td>
+			<td id="td84"><span id="span84">&#9812;</span></td>
+			<td style="background: var(--grey);">&#9813;</td>
+			<td>&#9815;</td>
+			<td style="background: var(--grey);">&#9816;</td>
+			<td>&#9814;</td>
+		</tr>		
+	</table><br>
+	<button onclick="next()">Next</button>
+	<button onclick="previous()">Previous</button>
+	<script type="text/javascript">
+		let step_count = 0;
+		function next(){
+			if(step_count < 4){
+				step_count+=1;
+			}
+			console.log(step_count);
+			change();
+		}
+
+		function previous(){
+			if(step_count > 0){
+				step_count-=1;
+			}
+			console.log(step_count);
+			change();
+		}
+
+		function change(){
+			if(step_count == 0){
+				document.getElementById("td21").appendChild(document.getElementById("span21"));
+			}
+
+			if(step_count == 1){
+				document.getElementById("td78").appendChild(document.getElementById("span78"));
+				document.getElementById("td31").appendChild(document.getElementById("span21"));
+			}
+
+
+			if(step_count == 2){
+				document.getElementById("td31").appendChild(document.getElementById("span21"));
+				document.getElementById("td68").appendChild(document.getElementById("span78"));
+			}
+
+			if (step_count == 3) {
+				document.getElementById("td41").appendChild(document.getElementById("span21"));
+				document.getElementById("td84").appendChild(document.getElementById("span84"));
+			}
+
+			if (step_count == 4){
+				document.getElementById("td52").appendChild(document.getElementById("span84"));
+			}
+		}
+	</script>
+</body>
+</html>

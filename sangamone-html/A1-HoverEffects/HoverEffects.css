@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+*{
+    font-family: "Lexend";
+}
+
+.btn{
+    font-size: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    box-shadow: 20px 15px 30px rgba(0, 0, 0, 0.3);
+}

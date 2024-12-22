@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Accordion</title>
+	<style>
+		#acc2{
+			display: none;
+		}		
+	</style>
+</head>
+<body>
+	<div>
+		<div id="acc1">Animals</div>	
+		<div id="acc2">
+			<ul>
+				<li>tiger</li>
+				<li>dog</li>
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let acc_body = document.getElementById("acc2");
+		document.getElementById('acc1').onclick = function(){
+			if(acc_body.style.display == "none"){
+				acc_body.style.display = "block";
+			}else{
+				acc_body.style.display = "none";
+			}
+		}
+	</script>
+</body>
+</html>

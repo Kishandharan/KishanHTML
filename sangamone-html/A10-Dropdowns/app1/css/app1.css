@@ -1,0 +1,35 @@
+.theme1{
+	display: flex;
+	gap: 20px;
+	background-color: darkblue;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+.theme1 *{
+	font-family: monospace;
+	font-size: 30px;
+	color: white;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.theme2{
+	background-color: darkblue;
+	display: none;
+	position: absolute;
+}
+
+.dd:hover .theme2{
+	display: block;
+}
+
+.theme3{
+	line-height: 40px;
+}
+
+.theme3:hover{
+	background-color: #082ac2;
+}

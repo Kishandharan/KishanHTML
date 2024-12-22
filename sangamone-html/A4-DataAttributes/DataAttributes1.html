@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p data-count="1" id="p1">datacount1</p> 
+    <p data-count="2" id="p2">datacount2</p> 
+    <p data-count="3" id="p3">datacount3</p> 
+    <p data-count="4" id="p4">datacount4</p> 
+    <p data-count="5" id="p5">datacount5</p> 
+    <script>
+        let p1 = document.getElementById("p1");
+        let p2 = document.getElementById("p2");
+        let p3 = document.getElementById("p3");
+        let p4 = document.getElementById("p4");
+        let p5 = document.getElementById("p5");
+        console.log(p1.dataset.count);
+        console.log(p2.dataset.count);
+        console.log(p3.dataset.count);
+        console.log(p4.dataset.count);
+        console.log(p5.dataset.count);
+    </script>
+</body>
+</html>

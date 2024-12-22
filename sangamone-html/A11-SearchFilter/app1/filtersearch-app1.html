@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/app1.css">
+	<title>Filter search</title>
+</head>
+<body>
+	<input type="text" placeholder="Search for countries" id="si" oninput="search()">
+	<ul>
+		<li class="item">Zambia</li>
+		<li class="item">Norway</li>
+		<li class="item">Thailand</li>
+		<li class="item">Peru</li>
+		<li class="item">Mongolia</li>
+		<li class="item">Ghana</li>
+		<li class="item">Slovakia</li>
+		<li class="item">Costa Rica</li>
+		<li class="item">Kuwait</li>
+		<li class="item">Ecuador</li>
+	</ul>
+	<script>
+		function search(){
+			let searchinput = document.getElementById('si').value.toLowerCase();
+			let items = document.getElementsByClassName('item');
+			for(let i = 0; i<items.length; i++){
+				let countryname = items[i].textContent.toLowerCase();
+
+				if(countryname.includes(searchinput)){
+					items[i].style.display = "";
+				}else{
+					items[i].style.display = "none";
+				}
+
+				if(searchinput == "") {
+					items[i].style.display = "";
+				}
+
+			}
+		}
+	</script>
+</body>
+</html>

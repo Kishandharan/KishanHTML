@@ -1,0 +1,94 @@
+*{
+	font-family: "Arial";
+}
+
+.topbar{
+	position: fixed;
+	padding: 10px;
+	width: 100%;
+	top: 0;
+	right: 0;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.icon{
+	margin-right: 20%;
+	margin-left: 3%;
+	margin-top: 1%;
+}
+
+.topbar *{
+	font-size: 25px;
+	user-select: none;
+}
+
+.theme1{
+	display: inline-block;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.theme2{
+	text-decoration: underline;
+}
+
+.theme1:hover{
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-color: orange;
+}
+
+
+.theme3{
+	background: orange;
+	padding: 10px;
+	border-radius: 30px;
+	color: white;
+	font-weight: bolder;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.theme4{
+	color: orange;
+}
+
+.theme5{
+	padding-top: 200px;
+	padding-left: 180px;
+}
+
+.theme6{
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	display: inline-block;
+	padding: 10px;
+	width: 500px;
+	height: 500px;
+	border-radius: 500px;
+	position: relative;
+}
+
+.theme7{
+	position: absolute;
+	left: 55px;
+	top: 80px;
+}
+
+.theme8{
+	position: relative;
+	left: 110%;
+	top: 20%;
+}
+
+.theme9{
+	font-weight: 200;
+}
+
+.theme10{
+	color: orange;
+}
+
+.theme11{
+	line-height: 25px;
+	font-size: 20px;
+}

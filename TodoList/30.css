@@ -1,0 +1,38 @@
+*{
+	font-family: "Lexend";
+	color: white;
+}
+
+body{
+	background-color: #000224;
+}
+
+ul{
+	list-style-type: none;
+}
+
+.data-card{
+	background-color: #ffffff;
+	color: black;
+	padding: 10px;
+	font-size: 26px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+input[type="checkbox"]{
+	height: 1.6em;
+	width: 1.6em;
+}
+
+input[type="text"]{
+	font-size: x-large;
+	color: black;
+	margin-bottom: 1em;
+}
+
+#remtaskbtn, #addtaskbtn{
+	color: black;
+	font-size: x-large;
+}
+

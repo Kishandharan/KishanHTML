@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.original{
+			visibility: hidden;
+			position: absolute;
+		}
+
+		.new{
+			border: 5px solid black;
+			border-radius: 50px;
+			padding: 5px;
+			width: 50px;
+			height: 50px;
+			background-image: linear-gradient(to right, purple 10%, orange);
+		}
+	</style>
+</head>
+<body>
+	<input type="color" class="original" id="original">
+	<div class="new" id="new">
+	</div>
+
+	<script type="text/javascript">
+		var newcolorpicker = document.getElementById('new');
+		var original = document.getElementById('original');
+		newcolorpicker.onclick = function(){
+			original.click();
+		}
+	</script>
+</body>
+</html>

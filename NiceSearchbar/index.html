@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=JetBrains Mono">
+	<title>Keyboard Triggered Searchbar</title>
+	<style>
+		*{
+			font-family: "JetBrains Mono";
+		}
+		:root{
+			--dark_blue_green: #011926;
+		}
+		body{
+			margin: 0;
+			background: var(--dark_blue_green);
+		}
+		.overlay1{
+			background-color: black;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.6;
+			display: none;
+		}
+
+
+	</style>
+</head>
+<body>
+	<p style="margin: 10px; color: white; font-size: xx-large;">Press the S key on your keyboard</p>
+	<div class="overlay1" id="overlay1">
+		<input type="text" id="inp">
+	</div>
+	<script type="text/javascript">
+		let isopen = false;
+		let overlay1 = document.getElementById('overlay1');
+		document.onkeypress = function (e) {
+			if(e.key == "s"){
+				if (!(document.getElementById("inp").hasFocus())) {
+					if(isopen === false){
+						isopen = true;
+						overlay1.style.display="block";
+						console.log("Hey!");
+					}
+				}
+			if (e.key == "x") {
+				if (!(document.getElementById("inp").hasFocus())) {
+					if(isopen === true){
+						isopen = false;
+						overlay1.style.display="none";
+						console.log("Hmm!");
+					}
+				}
+			};
+	</script>
+</body>
+</html>

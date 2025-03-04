@@ -1,4 +1,11 @@
-var some_element = document.createElement("p");
-some_element.textContent = "this is my fav";
-// To be continued...
-
+var board = document.createElement("table");
+board.id = "chessboard";
+	  
+var set_JetBrainsMono_fontc = `
+	<style>
+	    *{
+			font-family: "JetBrains Mono"
+	    }
+	</style>
+`
+document.head.innerHTML += set_JetBrainsMono_fontc;

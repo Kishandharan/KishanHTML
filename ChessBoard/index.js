@@ -1,4 +1,4 @@
-// --------------- Declarations
+// --------------- Declarations ----
 var fontlink = document.createElement("link");
 var board = document.createElement("table");
 var chess_icons_black = {
@@ -21,34 +21,20 @@ var set_JetBrainsMono_fontc = `
 			font-family: "JetBrains Mono"
 	    }
 	</style>`;
-var rows = [
-	document.createElement("tr"),
-	document.createElement("tr"),
-	document.createElement("tr"),
-	document.createElement("tr"),
-	document.createElement("tr"),
-	document.createElement("tr"),
-	document.createElement("tr"),
-	document.createElement("tr")]
-var tableData = [
-	document.createElement("td"),
-	document.createElement("td"),
-	document.createElement("td"),
-	document.createElement("td"),
-	document.createElement("td"),
-	document.createElement("td"),
-	document.createElement("td"),
-	document.createElement("td"),]
 
 // ---------------- Settings and Main Code ----------------------
 fontlink.href = "https://fonts.googleapis.com/css?family=JetBrains Mono";
 document.title = "Chess Game";
 document.head.appendChild(fontlink);
 document.body.appendChild(board);
-for(var i = 0; i < rows.length; i++){
-	board.appendChild(rows[i]);
-
-    for(var j = 0; j < tableData.length; j++){
-		rows[i].appendChild(tableData[j]);
+for(var i = 1; i<=8; i++){
+	board.innerHTML += `
+		<tr id="row${i}"></tr>
+	`
+	for(var j = 1; j<=8; j++){
+		document.getElementById(`row${i}`).innerHTML += `
+		   <td></td>
+		`;
 	}
+
 }

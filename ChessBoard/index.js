@@ -27,14 +27,16 @@ fontlink.href = "https://fonts.googleapis.com/css?family=JetBrains Mono";
 document.title = "Chess Game";
 document.head.appendChild(fontlink);
 document.body.appendChild(board);
-for(var i = 1; i<=8; i++){
-	board.innerHTML += `
-		<tr id="row${i}"></tr>
-	`
-	for(var j = 1; j<=8; j++){
-		document.getElementById(`row${i}`).innerHTML += `
-		   <td></td>
-		`;
-	}
 
-}
+board.innerHTML += `
+	<tr>
+		<td>&#9818;</td>
+		<td>2</td>
+		<td>3</td>
+		<td>4</td>
+		<td>5</td>
+		<td>6</td>
+		<td>7</td>
+		<td>8</td>
+	</tr>	
+`

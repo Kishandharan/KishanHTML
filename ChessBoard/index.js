@@ -15,11 +15,14 @@ var chess_icons_white = {
 	bishop  :   "&#9815",
 	knight  :   "&#9816",
 	pawn    :   "&#9817"}	  
-var set_JetBrainsMono_fontc = `
+var table_font_style = `
 	<style>
 	    *{
 			font-family: "JetBrains Mono"
 	    }
+		table *{
+		    font-size: 100px;
+		} 
 	</style>`;
 
 // ---------------- Settings and Main Code ----------------------
@@ -27,16 +30,27 @@ fontlink.href = "https://fonts.googleapis.com/css?family=JetBrains Mono";
 document.title = "Chess Game";
 document.head.appendChild(fontlink);
 document.body.appendChild(board);
+document.head.innerHTML += table_font_style;
 
 board.innerHTML += `
 	<tr>
-		<td>&#9818;</td>
-		<td>2</td>
-		<td>3</td>
-		<td>4</td>
-		<td>5</td>
-		<td>6</td>
-		<td>7</td>
-		<td>8</td>
+		<td>${chess_icons_black["rook"]}</td>
+		<td>${chess_icons_black["knight"]}</td>
+		<td>${chess_icons_black["bishop"]}</td>
+		<td>${chess_icons_black["king"]}</td>
+		<td>${chess_icons_black["queen"]}</td>
+		<td>${chess_icons_black["bishop"]}</td>
+		<td>${chess_icons_black["knight"]}</td>
+		<td>${chess_icons_black["rook"]}</td>
+	</tr>	
+	<tr>
+		<td>${chess_icons_black["pawn"]}</td>
+		<td>${chess_icons_black["pawn"]}</td>
+		<td>${chess_icons_black["pawn"]}</td>
+		<td>${chess_icons_black["pawn"]}</td>
+		<td>${chess_icons_black["pawn"]}</td>
+		<td>${chess_icons_black["pawn"]}</td>
+		<td>${chess_icons_black["pawn"]}</td>
+		<td>${chess_icons_black["pawn"]}</td>
 	</tr>	
 `

@@ -22,7 +22,7 @@ var table_font_style = `
 	    }
 		table *{
 		    font-size: 100px;
-		} 
+		}  
 	</style>`;
 
 // ---------------- Settings and Main Code ----------------------
@@ -31,6 +31,8 @@ document.title = "Chess Game";
 document.head.appendChild(fontlink);
 document.body.appendChild(board);
 document.head.innerHTML += table_font_style;
+board.style.width = "200px";
+board.style.height = "200px";
 
 board.innerHTML += `
 	<tr>
@@ -52,5 +54,29 @@ board.innerHTML += `
 		<td>${chess_icons_black["pawn"]}</td>
 		<td>${chess_icons_black["pawn"]}</td>
 		<td>${chess_icons_black["pawn"]}</td>
+	</tr>
+	<tr></tr>	
+	<tr></tr>	
+	<tr></tr>	
+	<tr></tr>	
+	<tr>
+		<td>${chess_icons_white["pawn"]}</td>
+		<td>${chess_icons_white["pawn"]}</td>
+		<td>${chess_icons_white["pawn"]}</td>
+		<td>${chess_icons_white["pawn"]}</td>
+		<td>${chess_icons_white["pawn"]}</td>
+		<td>${chess_icons_white["pawn"]}</td>
+		<td>${chess_icons_white["pawn"]}</td>
+		<td>${chess_icons_white["pawn"]}</td>
+	</tr>
+	<tr>
+		<td>${chess_icons_white["rook"]}</td>
+		<td>${chess_icons_white["knight"]}</td>
+		<td>${chess_icons_white["bishop"]}</td>
+		<td>${chess_icons_white["king"]}</td>
+		<td>${chess_icons_white["queen"]}</td>
+		<td>${chess_icons_white["bishop"]}</td>
+		<td>${chess_icons_white["knight"]}</td>
+		<td>${chess_icons_white["rook"]}</td>
 	</tr>	
 `

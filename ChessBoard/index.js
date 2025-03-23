@@ -20,9 +20,15 @@ var table_font_style = `
 	    *{
 			font-family: "JetBrains Mono"
 	    }
-		table *{
-		    font-size: 100px;
-		}  
+	    table *{
+	       font-size: 50px;
+	    }
+		td{
+			text-align: center;
+		    width: 90px;
+	        height: 70px;
+			border: 1px solid grey;
+		}
 	</style>`;
 
 // ---------------- Settings and Main Code ----------------------
@@ -31,8 +37,6 @@ document.title = "Chess Game";
 document.head.appendChild(fontlink);
 document.body.appendChild(board);
 document.head.innerHTML += table_font_style;
-board.style.width = "200px";
-board.style.height = "200px";
 
 board.innerHTML += `
 	<tr>
@@ -55,10 +59,46 @@ board.innerHTML += `
 		<td>${chess_icons_black["pawn"]}</td>
 		<td>${chess_icons_black["pawn"]}</td>
 	</tr>
-	<tr></tr>	
-	<tr></tr>	
-	<tr></tr>	
-	<tr></tr>	
+	<tr>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	</tr>	
+	<tr>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	</tr>	
+	<tr>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	</tr>	
+	<tr>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+	</tr>	
 	<tr>
 		<td>${chess_icons_white["pawn"]}</td>
 		<td>${chess_icons_white["pawn"]}</td>

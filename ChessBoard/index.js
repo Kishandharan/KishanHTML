@@ -1,6 +1,7 @@
 // --------------- Declarations ----
 var fontlink = document.createElement("link");
 var board = document.createElement("table");
+var script_web_llm = document.createElement();
 var chess_icons_black = {
 	king    :   "&#9818;",
 	queen   :   "&#9819;",

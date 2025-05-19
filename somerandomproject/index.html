@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Freaking webpage</title>
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            .class1{
+                color: "yellow";
+                font-weight: bold;
+            }
+
+            .class2{
+                color: "Blue";
+                font-weight: lighter;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="freakingbutton" class="class1">Click on me, please!!!</p>
+        <script>
+            document.getElementById("freakingbutton").setAttribute("onclick", () => {
+                document.getElementById("freakingbutton").textContent = "Yay! Now my life is changed!";
+                document.getElementById("freakingbutton").setAttribute("class", "class2");
+            }); 
+        </script>
+    </body>
+</html>

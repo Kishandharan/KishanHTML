@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Flag</title>
+    <style>
+         body{
+             background: black;
+         }
+        .flag{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flagdimen{
+            height: 150px;
+            width: 600px;
+        }
+
+        .part1{
+            background: orange;
+        }
+        .part2{
+            background: white;
+        }
+        .part3{
+            background: green;
+        }
+
+        .part2 > img{
+            margin-left: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flag">
+        <div class="part1 flagdimen"></div>
+        <div class="part2 flagdimen">
+            <img id="chakra" src="ashokachakra.png" alt="">
+        </div>
+        <div class="part3 flagdimen"></div>
+    </div>
+    <script>
+        var showChakra=true;
+        document.getElementById("chakra").onclick = function(){
+            if(showChakra==true){
+                document.getElementById("chakra").style.opacity = "0";
+                showChakra=false;
+            }else{
+                document.getElementById("chakra").style.opacity = "1";
+                showChakra=true;
+            }
+        } 
+    </script>
+</body>
+</html>

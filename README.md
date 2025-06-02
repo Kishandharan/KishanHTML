@@ -195,7 +195,7 @@ Below is an example:
 
 # Assignment 1 - Indian Tricolor Flag with Ashoka Chakra    
 ## 1a 
-Build a HTML page showing the indian flag with red white green rectangular areas with an image of an ashoka chakra using the tags <head>, <body>, <style>, <title>, <img>, <div>   as in https://kishandharan.github.io/HTML/indianflag.html. Use image [ashokachakra.png](https://github.com/Kishandharan/HTML/blob/main/ashokachakra.png). Use class attribute to decorate each rectangular div element with required dimensions. Example width=600px height=150px and required color.
+Build a HTML page showing the [Indian flag](https://kishandharan.github.io/HTML/indianflag.html) with red white green rectangular areas with an image of an ashoka chakra using the tags head, body, style, title, img, div. Use image [ashokachakra.png](https://github.com/Kishandharan/HTML/blob/main/ashokachakra.png). Use class attribute to decorate each rectangular div element with required dimensions. Example width=600px height=150px and required color.
 ## 1b    
-Add an id to ashokachakra image, to make it toggle onclick. Use <script> tag to write a fuction that accesses the opacity CSS value and conditionally make it visible or hidden based on a boolean flag showChakra=true/false. Use document.getElementById() method to access the required DOM elements.
+Add an id to ashokachakra image, to make it toggle onclick. Use script tag to write a fuction that accesses the opacity CSS value and conditionally make it visible or hidden based on a boolean flag showChakra=true/false. Use document.getElementById() method to access the required DOM elements.
 

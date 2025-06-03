@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb on and off</title>
+    <style>
+        #bulb_id2{
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <img src="bulboff.gif" id="bulb_id1" width="200">
+    <p id="bulb_id2">Bulb is off</p>
+    <script>
+        var bulbState = false;
+        var bulb1 = document.getElementById("bulb_id1");
+        var bulb2 = document.getElementById("bulb_id2");
+
+        bulb1.onclick = function event1(){
+            if(bulbState == false){
+                bulb1.src = "bulbon.gif";
+                bulb2.textContent = "Bulb is on";
+                bulbState = true;
+            }else{
+                bulb1.src = "bulboff.gif";
+                bulb2.textContent = "Bulb is off";
+                bulbState = false;
+            }
+        }
+    </script>    
+</body>
+</html>

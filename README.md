@@ -199,3 +199,15 @@ Build a HTML page showing the [Indian flag](https://kishandharan.github.io/HTML/
 ## 1b    
 Add an id to ashokachakra image, to make it toggle onclick. Use script tag to write a fuction that accesses the opacity CSS value and conditionally make it visible or hidden based on a boolean flag showChakra=true/false. Use document.getElementById() method to access the required DOM elements.
 
+
+# Assignment 2 - Bulb on, Bulb off
+## 2a 
+Build a HTML page showing a [light bulb in the off state](https://kishandharan.github.io/HTML/bulb_onoff1.html).
+When clicked, the bulb should change to on state.
+Use images [bulbon.gif](https://github.com/Kishandharan/HTML/blob/main/bulbon.gif) and [bulboff.gif](https://github.com/Kishandharan/HTML/blob/main/bulboff.gif)
+Use img src="bulboff.gif" id="bulb_id1" width="200". bulb_id1 will be the id of the image corresponding to the bulb state. 
+width="200" can be changed to increase or decrease the size of the image.
+
+## 2b 
+Modify the HTML page to show an additional text within the p tag. "Bulb is on" or "Bulb is off".
+Use p id="bulb_id2">Bulb is off p. bulb_id2 will be the id of the text corresponding to the bulb state.

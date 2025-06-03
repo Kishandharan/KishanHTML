@@ -19,13 +19,32 @@
                 width:600px;
                 height: 150px;
             }
+
+            .part2 > img{
+                margin-left: 200px;
+            }
         </style>
     </head>
     </body>
         <div class="flag">
             <div class="part1 flagdimen"></div>
-            <div class="part2 flagdimen"></div>
+            <div class="part2 flagdimen">
+                <img src="ashokachakra.png" id="chakra">
+            </div>
             <div class="part3 flagdimen"></div>
         </div>
+        <script>
+            var showChakra = true;
+            var chakra1 = document.getElementById("chakra");
+            chakra1.onclick = function event1(){
+                if(showChakra == true){
+                    chakra1.style.opacity = "0.05";
+                    showChakra = false;
+                }else{
+                    chakra1.style.opacity="1";
+                    showChakra=true;
+                }
+            }
+        </script>
     </body>
 </html>

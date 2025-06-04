@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar 3</title>
+    <style>
+        table{
+            background-color: grey;
+        }
+        td{
+            background-color: white;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr id="row1">
+        </tr>
+        <tr id="row2">
+        </tr>
+    </table>
+    <script>
+        var weekdays1 = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+        var weekdays2 = [];
+        var row1 = document.getElementById("row1");
+        var row2 = document.getElementById("row2");
+        var days = [];
+        for(var i = 0; i<5; i++){
+            for(var j = 0; j<weekdays1.length; j++){
+                weekdays2.push(weekdays1[j])
+            }
+        }
+        days.push(".");
+        days.push(".");
+        days.push(".");
+        for(var i = 0; i<31; i++){
+            days.push(i+1);
+        }
+        days.push(".");
+        for(var i = 0; i<weekdays2.length; i++){
+            row1.innerHTML += `
+            <td>${weekdays2[i]}</td>
+            `
+        }
+
+        for(var i = 0; i<days.length; i++){
+            row2.innerHTML += `
+            <td>${days[i]}</td>
+            `
+        }
+    </script>
+</body>
+</html>

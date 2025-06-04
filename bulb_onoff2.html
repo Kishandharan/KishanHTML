@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulb on off</title>
+    <style>
+        #bulb2_id{
+            font-size: 40px;
+        }
+    </style>
 </head>
 <body>
     <img src="bulboff.gif" alt="" id="bulb1_id">
+    <p id="bulb2_id">Bulb is off</p>
     <script>
         var bulb1 = document.getElementById("bulb1_id");
+        var bulb2 = document.getElementById("bulb2_id");
         var bulbState = false;
         bulb1.onclick = function event1(){
             if(bulbState==false){
                 bulb1.src = "bulbon.gif";
+                bulb2.textContent = "Bulb is on";
                 bulbState = true;
             }else{
                 bulb1.src = "bulboff.gif";
+                bulb2.textContent = "Bulb is off";
                 bulbState = false;
             }
         }

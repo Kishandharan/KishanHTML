@@ -211,3 +211,8 @@ width="200" can be changed to increase or decrease the size of the image.
 ## 2b 
 Modify the HTML page to show an additional text within the p tag. "Bulb is on" or "Bulb is off".
 Use p id="bulb_id2">Bulb is off p. bulb_id2 will be the id of the text corresponding to the bulb state.
+
+# Assignment 3 - Calendar 2025
+## 3a 
+Build a HTML page showing the calendar for [Jan 2025]().
+

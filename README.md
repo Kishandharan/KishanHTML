@@ -214,5 +214,12 @@ Use p id="bulb_id2">Bulb is off p. bulb_id2 will be the id of the text correspon
 
 # Assignment 3 - Calendar 2025
 ## 3a 
-Build a HTML page showing the calendar for [Jan 2025]().
+Build a HTML page showing the calendar for [Jan 2025](https://kishandharan.github.io/HTML/calendar1.html).
+Use table, tr, td tags. To show sunday in red color, add class="red" and include it's properties within style tag as color:red;
+Use attributes width, height to adjust the dimensions of td tag and table tag.
+Set the background color of the table to black and set the background color of td tag to white to create a border.
+
+## 3b 
+
+
 

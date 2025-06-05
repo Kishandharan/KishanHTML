@@ -221,5 +221,18 @@ Set the background color of the table to black and set the background color of t
 
 ## 3b 
 
+# Assignment 4 - Simple Chess Board
+## 4a 
+Build a HTML page like [this webpage](https://kishandharan.github.io/HTML/chessboard1.html) showing a Simple chess board with colors #d18b47 and #ffcd9e.
+Dont add any pieces for now and put a full stop symbol on all the squares.
+Use table tag, tr tag and td tag to create the chess board.
+Use CSS properties width, height, text-align, font-size, font-weight and background color to style the page.
+Optionally, Use :root to define the CSS variables to set different rgb values for each color, namely, color1 and color2.
+If you have used CSS variables, use the var function to access the variables.
+Use classes color1 and color2 to apply the color for each square.
+
+## 4b 
+Now add the appropriate pieces using the unicode values of the chess pieces from [this website](https://www.alt-codes.net/chess-symbols.php).
+
 
 

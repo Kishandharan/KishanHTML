@@ -230,6 +230,7 @@ Use CSS properties width, height, text-align, font-size, font-weight and backgro
 Optionally, Use :root to define the CSS variables to set different rgb values for each color, namely, color1 and color2.
 If you have used CSS variables, use the var function to access the variables.
 Use classes color1 and color2 to apply the color for each square.
+![This image cannot be rendered](chessboard1.png)
 
 ## 4b 
 Now add the appropriate pieces using the unicode values of the chess pieces from [this website](https://www.alt-codes.net/chess-symbols.php).

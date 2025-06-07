@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Time</title>
+</head>
+<body>
+    <p id="time1"></p>    
+    <script>
+        var time1 = document.getElementById("time1");
+        var date1 = new Date();
+        time1.textContent = date1.getUTCMinutes();
+    </script>
+</body>
+</html>

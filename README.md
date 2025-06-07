@@ -197,7 +197,7 @@ Below is an example:
 ## 1a 
 Build a HTML page showing the [Indian flag](https://kishandharan.github.io/HTML/indianflag.html) with red white green rectangular areas with an image of an ashoka chakra using the tags head, body, style, title, img, div. Use image [ashokachakra.png](https://github.com/Kishandharan/HTML/blob/main/ashokachakra.png). Use class attribute to decorate each rectangular div element with required dimensions. Example width=600px height=150px and required color.
 ## 1b    
-Add an id to ashokachakra image, to make it toggle onclick. Use script tag to write a fuction that accesses the opacity CSS value and conditionally make it visible or hidden based on a boolean flag showChakra=true/false. Use document.getElementById() method to access the required DOM elements.
+Add an id to ashokachakra image, to make it toggle onclick. Use script tag to write a function that accesses the opacity CSS value and conditionally make it visible or hidden based on a boolean flag showChakra=true/false. Use document.getElementById() method to access the required DOM elements.
 
 
 # Assignment 2 - Bulb on, Bulb off
@@ -236,4 +236,36 @@ Use classes color1 and color2 to apply the color for each square.
 Now add the appropriate pieces using the unicode values of the chess pieces from [this website](https://www.alt-codes.net/chess-symbols.php).
 
 
+# Assignment 5 - Time in eight countries
+## 5a
+Build a HTML page which prints the time on the following eight countries. Dont need to use Live Updation here:
+- United Arab Emirates
+- Australia
+- Belgium
+- Brazil
+- Canada
+- France
+- Japan
+- South Africa
+First create a date object using "var date1 = new date();".
+In this date object, use the toLocaleString method to get the current time in each one of these countries.
+This is the syntax of the Method 
+``` 
+dateobj.toLocaleString("en-us", {timezone: "America/New_York"}) 
+``` 
+Replace "en-us" with some other format if you wish, but using en-us is recommended.
+Replace "America/New_York" with the appropriate country and city name.
+This returns the time in the country specfied.
+
+## 5b 
+Now add Live updates by adding a infinite loop and setTimeout() method.
+The setTimeout method is strongly recommended to use as it will prevent our browser from crashing,
+By introducing an delay before a function executes. 
+Below is the syntax of the setTimeout method:
+
+```
+setTimeout(function1, 1000)
+```
+
+Replace function1 with the correct function name, and replace the 1000 with the appropriate timeout, in milliseconds.
 

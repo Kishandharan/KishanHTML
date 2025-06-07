@@ -236,36 +236,3 @@ Use classes color1 and color2 to apply the color for each square.
 Now add the appropriate pieces using the unicode values of the chess pieces from [this website](https://www.alt-codes.net/chess-symbols.php).
 
 
-# Assignment 5 - Time in eight countries
-## 5a
-Build a HTML page which prints the time on the following eight countries. Dont need to use Live Updation here:
-- United Arab Emirates
-- Australia
-- Belgium
-- Brazil
-- Canada
-- France
-- Japan
-- South Africa
-First create a date object using "var date1 = new date();".
-In this date object, use the toLocaleString method to get the current time in each one of these countries.
-This is the syntax of the Method 
-``` 
-dateobj.toLocaleString("en-us", {timezone: "America/New_York"}) 
-``` 
-Replace "en-us" with some other format if you wish, but using en-us is recommended.
-Replace "America/New_York" with the appropriate country and city name.
-This returns the time in the country specfied.
-
-## 5b 
-Now add Live updates by adding a infinite loop and setTimeout() method.
-The setTimeout method is strongly recommended to use as it will prevent our browser from crashing,
-By introducing an delay before a function executes. 
-Below is the syntax of the setTimeout method:
-
-```
-setTimeout(function1, 1000)
-```
-
-Replace function1 with the correct function name, and replace the 1000 with the appropriate timeout, in milliseconds.
-

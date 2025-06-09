@@ -243,5 +243,6 @@ And when in reaches 0, it should stop running.
 ## 5b 
 Now create a timer which Alerts us as "Time up" when the time finishes. 
 Use the a p tag to display the alert message.
+Take [this website](https://kishandharan.github.io/HTML/timer1.html) as a reference if you want.
 
 

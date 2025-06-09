@@ -235,4 +235,13 @@ Use classes color1 and color2 to apply the color for each square.
 ## 4b 
 Now add the appropriate pieces using the unicode values of the chess pieces from [this website](https://www.alt-codes.net/chess-symbols.php).
 
+# Assignment 5 - Simple Countdown timer
+## 5a 
+Create a Simple timer which counts from 10 to 0 in seconds.
+And when in reaches 0, it should stop running.
+
+## 5b 
+Now create a timer which Alerts us as "Time up" when the time finishes. 
+Use the a p tag to display the alert message.
+
 

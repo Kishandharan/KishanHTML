@@ -260,3 +260,4 @@ Take [this website](https://kishandharan.github.io/HTML/seatselection1.html) the
 Use the setAttribute and getAttribute document functions in JS to manipulate the seats.
 Use an enhanced for loop to get the base functionality working for all the seats.
 Add some borders too to make the table more neater.
+Above the table, add some color indicators so that customers know which color indicates what.

@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="black" xmlns="http://www.w3.org/2000/svg">
+  <!-- Backrest (rounded rectangle) -->
+  <rect x="20" y="12" width="24" height="30" rx="6" />
+  <!-- Seat (rounded rectangle) -->
+  <rect x="18" y="36" width="28" height="10" rx="5" />
+  <!-- Left armrest (vertical rectangle) -->
+  <rect x="14" y="28" width="6" height="18" rx="3" />
+  <!-- Right armrest (vertical rectangle) -->
+  <rect x="44" y="28" width="6" height="18" rx="3" />
+</svg>

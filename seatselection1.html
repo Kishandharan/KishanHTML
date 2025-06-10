@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection</title>
+    <style>
+        table{
+            border: 5px solid gray;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><img src="seat3.svg"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat3.svg"></td>
+        </tr>
+        <tr>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+         </tr>
+        <tr>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+         </tr>
+        <tr>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+         </tr>
+        <tr>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+            <td><img src="seat1.svg" class="seat"></td>
+         </tr>
+    </table>    
+    <script>
+    let seats = document.getElementsByClassName("seat");
+    for (let seat of seats) {
+        seat.onclick = function () {
+            if (this.getAttribute("src") === "seat1.svg") {
+
+                this.setAttribute("src", "seat2.svg");
+
+            } else if (this.getAttribute("src") === "seat2.svg") {
+
+                this.setAttribute("src", "seat1.svg");
+
+            }
+        }
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #tim1{
+            background-color: #2870ed;
+            color: white;
+            font-family: sans-serif;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            border: 5px solid white;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <p id="tim1"></p>
+    <script>
+        let cou1 = 10;
+        let tim1 = document.getElementById("tim1");
+
+        let timer1 = setInterval(
+            function timer(){
+                cou1--;
+                tim1.textContent = cou1;
+                if(cou1 == 0){
+                    tim1.textContent = "Time up";
+                    tim1.style.color = "#f59207";
+                    clearInterval(timer1);
+                }
+            },
+            1000
+        )
+    </script>
+</body>
+</html>

@@ -245,4 +245,18 @@ Now create a timer which Alerts us as "Time up" when the time finishes.
 Use the a p tag to display the alert message.
 Take [this website](https://kishandharan.github.io/HTML/timer1.html) as a reference if you want.
 
+# Assignment 6 - Simple Seat Selection
+## 6a 
+Create a webpage where 30 seat icons are displayed in a 6 columns, 5 rows table.
+The first one and the last one in the first row have to be red in color, while the others have to be black.
+Dont need for any Selection functionality for now.
 
+## 6b 
+Now create the exact same webpage as before but now with some selection functionality.
+The user should be able to toggle select one any element, even multiselect.
+The selected seats should be green in color while non-selected seats can be in black color.
+The user should not be able to select the red seats as we make them occupied.
+Take [this website](https://kishandharan.github.io/HTML/seatselection1.html) the reference if you want.
+Use the setAttribute and getAttribute document functions in JS to manipulate the seats.
+Use an enhanced for loop to get the base functionality working for all the seats.
+Add some borders too to make the table more neater.

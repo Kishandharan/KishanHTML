@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection</title>
+    <style>
+        .gap{
+            width: 15px;
+        }
+        
+        .bus{
+            border: 5px solid rgba(0,0,0,0.5);
+            padding: 10px;
+        }
+
+        .indicators td{
+            text-align: center;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table class="indicators">
+        <tr>
+            <td><img src="seat1.svg" alt=""></td>
+            <td><img src="seat2.svg" alt=""></td>
+            <td><img src="seat3.svg" alt=""></td>
+        </tr>
+        <tr>
+            <td>Available</td>
+            <td>Selected</td>
+            <td>Not Available</td>
+        </tr>
+    </table>
+    <br>
+    <table class="bus">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><img src="steeringwheel.svg" width="40"></td>
+        </tr>
+        <tr>
+            <td><img src="seat3.svg"></td> <!-- Red Colour -->
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td> <!-- Green color -->
+            <td><img src="seat3.svg" alt=""></td>
+        </tr>
+        <tr>
+            <td><img class="seats" src="seat1.svg"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+        </tr>
+        <tr>
+            <td class="seats"><img src="seat1.svg"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+        </tr>
+        <tr>
+            <td><img class="seats" src="seat1.svg"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+        </tr>
+        <tr>
+            <td><img class="seats" src="seat1.svg"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+        </tr>
+        <tr>
+            <td><img class="seats" src="seat1.svg"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+        </tr>
+        <tr>
+            <td><img class="seats" src="seat1.svg"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+        </tr>
+        <tr>
+            <td><img class="seats" src="seat1.svg"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td class="gap"></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+            <td><img class="seats" src="seat1.svg" alt=""></td>
+        </tr>
+    </table>
+    <script>
+        let seats = document.getElementsByClassName("seats");
+        for(let seat of seats){
+            seat.onclick = function event1(){
+                if( seat.getAttribute("src") == "seat1.svg" ){
+
+                    seat.setAttribute("src", "seat2.svg");
+                    // When black seat is selected it will become green
+
+                }else if( seat.getAttribute("src") == "seat2.svg" ){
+
+                    seat.setAttribute("src", "seat1.svg");
+                    // When the green seat is selected it will become black
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>

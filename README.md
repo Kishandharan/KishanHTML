@@ -261,3 +261,23 @@ Use the setAttribute and getAttribute document functions in JS to manipulate the
 Use an enhanced for loop to get the base functionality working for all the seats.
 Add some borders too to make the table more neater.
 Above the table, add some color indicators so that customers know which color indicates what.
+
+
+# Assignment 7 - Password generator
+## 7a 
+Create a simple password generator which generates password everytime we refresh the webpage in the inspect console.
+Create a 3 arrays containing small letters, capital letters, and numbers respectively.
+Now pick a random element from all these arrays and add them to a string. And then print them in the console
+This generates a simple 3 digit password in the console.
+
+## 7b 
+Now create a webpage that displays the output in the UI instead of the console. 
+Instead of needing to refresh the webpage everytime we want a new password, create a button that generates a new Password
+everytime it has been clicked and shows it in the UI. Create a array that has all the items of all these three arrays.
+Now instead of picking random elements from the three arrays, pick 3 random chars from the fourth combined array.
+This way the password will be shuffled and will be more secure.
+
+## 7c 
+Now make a new version of the previous webpage. Here take two inputs, one specifying the number of passwords to generate,
+and the other specifying the length of the password. Add all those passwords to a very nice and neat numbered list.
+Use a font from google APIs such as JetBrains Mono font to make the website look much neater.

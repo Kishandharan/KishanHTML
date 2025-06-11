@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <style>
+        *{
+            font-family: "JetBrains Mono";
+        }
+        #qty, #len{
+            font-size: 1.5rem;
+            border: 3px solid black;
+        }
+
+        #submit{
+            background-color: #0062ff;
+            color: white;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+
+        #submit:hover{
+            background-color: #0ff50f;
+        }
+
+        .large{
+            font-size: 1.5rem;
+        }
+
+        #passwords{
+            font-size: 1.5rem;
+            margin: 20px;
+        }
+
+        .inpfield{
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <table class="inpfield">
+        <tr>
+            <td class="large">Password Quantity</td>
+            <td><input id="qty" type="number"></td>
+        </tr>
+        <tr>
+            <td class="large">Password Length</td>
+            <td><input id="len" type="number"></td>
+        </tr>
+    </table>
+    <br>
+    <button id="submit">Submit</button>
+    <ol id="passwords">
+        
+    </div>
+    <script>
+        let passwords = document.getElementById("passwords");
+        let qty = document.getElementById("qty");
+        let len = document.getElementById("len");
+        let submit = document.getElementById("submit");
+        let lowerletters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        let upperletters =  ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+        let numbers = ["1","2","3","4","5","6","7","8","9","0"]
+        let all = [...lowerletters, ...upperletters, ...numbers]
+        submit.onclick = function event(){
+            let pwd_len = len.value;
+            let pwd_qty = qty.value;
+            let pwd="";
+            passwords.innerHTML = "";
+            for(let i = 0; i<pwd_qty;i++){
+                // Math.floor(Math.random() * 100);
+                for(let j = 0; j<pwd_len; j++){
+                    //61
+                    pwd+=all[(Math.floor(Math.random() * 62))];
+                }
+                passwords.innerHTML += ("<li>"+pwd+"</li>");
+                pwd = "";
+            }
+        }
+    </script>
+</body>
+</html>

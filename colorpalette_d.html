@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random colorpalette generator</title>
+    <style>
+        td{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table id="palette">
+        
+    </table>    
+    <script>
+        let palette = document.getElementById("palette");
+        let innerhtml = "";
+        let rnd_red = 0;
+        let rnd_green = 0;
+        let rnd_blue = 0;
+        let lsttdnum = 0;
+
+        for(let j = 0; j<16; j++){
+            innerhtml += "<tr>"
+            for(let i = 0; i<16; i++){
+                lsttdnum += 1;
+                innerhtml += `<td id="td${lsttdnum}"></td>`;
+            }
+            innerhtml += "</tr>"
+        }
+
+        palette.innerHTML = innerhtml;
+
+        for(let i = 1; i<=256; i++){
+            rnd_red = Math.floor(Math.random() * 256);
+            rnd_green = Math.floor(Math.random() * 256);
+            rnd_blue = Math.floor(Math.random() * 256);
+            let bgcolor = `rgb(${rnd_red}, ${rnd_green}, ${rnd_blue})`; 
+            document.getElementById(`td${i}`).style.backgroundColor = bgcolor;
+        }
+    </script>
+</body>
+</html>

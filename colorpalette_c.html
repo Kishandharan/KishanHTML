@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <title>Color Picker</title>
+    <style>
+        *{
+            font-family: "JetBrains Mono";
+        }
+        #colorbox{
+            width: 300px;
+            height: 300px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: 1px solid black;
+        }
+
+        #red, #green, #blue{
+            font-size: 1.6rem;
+        }
+        
+        #submit{
+            background-color: #072ef2;
+            font-size: 1.4rem;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            transition: all 1s ease;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #submit:hover{
+            background-color: #01105c;
+        }
+
+        td{
+            font-size: 1.4rem;
+            width: 300px;
+        }
+    </style>    
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Red Intensity </td>
+            <td><input type="number" id="red"></td>
+        </tr>
+        <tr>
+            <td>Green Intensity </td>
+            <td><input type="number" id="green"></td>
+        </tr>
+        <tr>
+            <td>Blue Intensity </td>
+            <td><input type="number" id="blue"></td>
+        </tr>
+    </table><br>
+    <button id="submit">Submit</button>
+    <div id="colorbox"></div>
+    <script>
+        let red = document.getElementById("red");
+        let green = document.getElementById("green");
+        let blue = document.getElementById("blue");
+        let colorbox = document.getElementById("colorbox");
+        let submit_btn = document.getElementById("submit");
+        colorbox.style.opacity = "0";
+
+        submit_btn.onclick = function event(){
+            if((red.value > 255 | red.value < 0) | (green.value > 255 | green.value < 0) | (blue.value > 255 | blue < 0)){
+                alert("Values cannot be less than 0 or greater than 255");
+            }else{
+                colorbox.style.opacity = "1";
+                colorbox.style.backgroundColor = ` rgb(${red.value}, ${green.value}, ${blue.value}) `;
+            }
+        }
+    </script>
+</body>
+</html>

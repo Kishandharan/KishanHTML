@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette</title>
+</head>
+<body>
+    <table id="colorpalette">
+                
+    </table>
+    <script>
+        let colorpalette = document.getElementById("colorpalette");
+        let redshades = [
+            "rgb(255, 0, 0)", 
+            "rgb(179, 0, 0)", 
+            "rgb(134, 0, 0)", 
+            "rgb(105, 0, 0)", 
+            "rgb(69, 0, 0)",
+            "rgb(46, 0, 0)", 
+            "rgb(37, 0, 0)", 
+            "rgb(0, 0, 0)"
+        ];
+
+        let greenshades = [
+            "rgb(0, 255, 0)", 
+            "rgb(0, 179, 0)", 
+            "rgb(0, 134, 0)", 
+            "rgb(0, 105, 0)", 
+            "rgb(0, 69, 0)",
+            "rgb(0, 46, 0)", 
+            "rgb(0, 37, 0)", 
+            "rgb(0, 0, 0)"
+        ]
+
+        let blueshades = [
+            "rgb(0, 0, 255)", 
+            "rgb(0, 0, 179)", 
+            "rgb(0, 0, 134)", 
+            "rgb(0, 0, 105)", 
+            "rgb(0, 0, 69)",
+            "rgb(0, 0, 46)", 
+            "rgb(0, 0, 37)", 
+            "rgb(0, 0, 0)"
+        ]
+        let innerhtml = "";
+        
+        // 8 shades of Red
+        innerhtml += `<tr>`
+        for(let shade of redshades){
+            innerhtml += `<td style="width: 100px; height: 50px; background-color: ${shade}"></td>`
+        }
+        innerhtml += `</tr>`
+
+        // 8 shades of green
+        innerhtml += `<tr>`
+        for(let shade of greenshades){
+            innerhtml += `<td style="width: 100px; height: 50px; background-color: ${shade}"></td>`
+        }
+        innerhtml += `</tr>`
+        
+        // 8 shades of blue
+        innerhtml += `<tr>`
+        for(let shade of blueshades){
+            innerhtml += `<td style="width: 100px; height: 50px; background-color: ${shade}"></td>`
+        }
+        innerhtml += `</tr>`
+
+        colorpalette.innerHTML = innerhtml; // Reflect changes in DOM
+    </script>
+</body>
+</html>

@@ -281,3 +281,38 @@ This way the password will be shuffled and will be more secure.
 Now make a new version of the previous webpage. Here take two inputs, one specifying the number of passwords to generate,
 and the other specifying the length of the password. Add all those passwords to a very nice and neat numbered list.
 Use a font from google APIs such as JetBrains Mono font to make the website look much neater.
+
+
+# Assignment 8 - Colour Palette
+
+## 8a
+
+Generate 8 shades of RED colour and show in a tabular format       
+Generate 8 shades of GREEN colour and show it in a tabular format     
+Generate 8 shades of BLUE colour and show it in a tabular format   
+This can be done to assist in selecting a user to decide        
+- which shade of paint to used for his house                       
+- which shade of paint to be used for choosing a school uniform          
+
+## 8b                                                                     
+Create a HTML form with 3 inputs.                                                    
+Enter Value of Red -                                       
+Enter Value of Green                                         
+Enter Value of Blue                                           
+Submit button                                                
+It should generate the colour in a big rectangular area                               
+
+## 8c                                                        
+For the above form, create validation for each field                              
+RED value should be between 0 to 255                                         
+GREEN value should be between 0 to 255                                         
+BLUE value should be between 0 to 255                                                     
+
+
+## 8d  
+Generate a 16x16 grid to show 256 different colours by varying R, G, B values systematically through 3 nested FOR loops.                                       
+This can be done in different ways.                      
+For example using a Random number also.                      
+
+## 8e   
+If you hover over any colour, it should show the required RGB value.  Insert a Copy button so that it can be pasted in any IDE

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Palette</title>
+    <style>
+        td{
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <table id="palette"></table>
+    <script>
+        let palette = document.getElementById("palette");
+        let innerhtml = "";
+        let redshades = [
+            "rgb(255, 0, 0)",
+            "rgb(173, 0, 0)",
+            "rgb(139, 0, 0)",
+            "rgb(105, 0, 0)",
+            "rgb(78, 0, 0)",
+            "rgb(46, 0, 0)",
+            "rgb(24, 0, 0)",
+            "rgb(0, 0, 0)"
+        ];
+
+        let greenshades = [
+            "rgb(0, 255, 0)",
+            "rgb(0, 173, 0)",
+            "rgb(0, 139, 0)",
+            "rgb(0, 105, 0)",
+            "rgb(0, 78, 0)",
+            "rgb(0, 46, 0)",
+            "rgb(0, 24, 0)",
+            "rgb(0, 0, 0)"
+        ];
+
+        let blueshades = [
+            "rgb(0, 0, 255)",
+            "rgb(0, 0, 173)",
+            "rgb(0, 0, 139)",
+            "rgb(0, 0, 105)",
+            "rgb(0, 0, 78)",
+            "rgb(0, 0, 46)",
+            "rgb(0, 0, 24)",
+            "rgb(0, 0, 0)"
+        ];
+
+
+        // 8 shades of red
+        innerhtml += "<tr>";
+        for(let color of redshades){
+            innerhtml += `<td style="background-color: ${color}"></td>`
+        }
+        innerhtml += "</tr>";
+
+        // 8 shades of red
+        innerhtml += "<tr>";
+        for(let color of greenshades){
+            innerhtml += `<td style="background-color: ${color}"></td>`
+        }
+        innerhtml += "</tr>";
+
+
+        // 8 shades of red
+        innerhtml += "<tr>";
+        for(let color of blueshades){
+            innerhtml += `<td style="background-color: ${color}"></td>`
+        }
+        innerhtml += "</tr>";
+
+
+
+        palette.innerHTML += innerhtml;
+    </script>
+</body>
+</html>

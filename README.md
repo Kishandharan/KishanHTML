@@ -316,3 +316,10 @@ For example using a Random number also.
 
 ## 8e   
 If you hover over any colour, it should show the required RGB value.  Insert a Copy button so that it can be pasted in any IDE
+
+
+# Assignment 9 - Joke Generator 
+## 9a 
+Create a web page where it shows random jokes. Use the https://icanhazdadjoke.com api to fetch random jokes.
+It should display a simple box with a thick black border inside which the joke should be displayed. Use a font like JetBrains Mono to display everything,
+so that it looks clean. The joke displayed inside the box should be orange in color.

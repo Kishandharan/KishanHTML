@@ -323,3 +323,11 @@ If you hover over any colour, it should show the required RGB value.  Insert a C
 Create a web page where it shows random jokes. Use the https://icanhazdadjoke.com api to fetch random jokes.
 It should display a simple box with a thick black border inside which the joke should be displayed. Use a font like JetBrains Mono to display everything,
 so that it looks clean. The joke displayed inside the box should be orange in color.
+
+
+# Assignment 10 - US presidents
+## 10a 
+Build a web page where the images of 17 US presidents is shown.
+Show them In a tabular form. When we hover over any of the US president image, it should form a shadow right behind the image in a smooth way.
+Use the "transition" and the "box-shadow" CSS properties to achieve this. When any image is clicked, it should take it to a github page and show the image there, the challenge here is to use only js and no a tags for hyperlinks.
+Take [this page](https://kishandharan.github.io/uspresidents_a1.html) as a reference.

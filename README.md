@@ -330,4 +330,4 @@ so that it looks clean. The joke displayed inside the box should be orange in co
 Build a web page where the images of 17 US presidents is shown.
 Show them In a tabular form. When we hover over any of the US president image, it should form a shadow right behind the image in a smooth way.
 Use the "transition" and the "box-shadow" CSS properties to achieve this. When any image is clicked, it should take it to a github page and show the image there, the challenge here is to use only js and no a tags for hyperlinks.
-Take [this page](https://kishandharan.github.io/uspresidents_a1.html) as a reference.
+Take [this page](https://kishandharan.github.io/HTML/uspresidents_a1.html) as a reference.

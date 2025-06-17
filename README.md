@@ -332,3 +332,23 @@ Use two buttons with arrows pointing to left and right to go to the previous or 
 Round the cornors of the image and the buttons. Make a indicator right above the image saying "President-1", "President-2", "President-3" and so on 
 till "President-17" to indicate the current image we are in.
 Take [this page](https://kishandharan.github.io/HTML/uspresidents_a1.html) as a reference.
+
+## 10b 
+Now do the a similar page with a slide show but this time,
+the previous button should dissapear when we reach the first president image and the next button should dissapear when we 
+reach the last president image.
+
+## 10c 
+Create a web page where all the presidents images are shown as a film slide, cycling through the images by itself.
+We do not need any buttons here 
+
+# Assignment 11 - Permutation
+## 11a 
+Create a web page where we take a 3 word input and the permutation for that word is shown as a numbered list.
+Add a submit button so that the user can pass the input to our web page, add some nice and smooth animations to the button too.
+
+## 11b 
+Now create a webpage similar to the previous one, but it shows permutations for 4 letter words
+
+## 11c
+Now create the exact same page as before but this has to only work with 5 letter words.

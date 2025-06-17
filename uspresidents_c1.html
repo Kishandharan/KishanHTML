@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains Mono">
+    <title>US Presidents</title>
+    <style>
+        *{
+            font-family: JetBrains Mono;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #img{
+            width: 400px;
+            margin: 5px;
+            border-radius: 20px;
+        }
+        #indicator{
+            margin: 0;
+            font-size: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <p id="indicator">President-1</p>
+    <img src="President1.jfif" id="img">
+    <script>
+        let imgs = [
+            "President1.jfif", 
+            "President2.jfif", 
+            "President3.jfif", 
+            "President4.jfif", 
+            "President5.jfif", 
+            "President6.jfif", 
+            "President7.jfif", 
+            "President8.jfif", 
+            "President9.jfif", 
+            "President10.jfif", 
+            "President11.jfif", 
+            "President12.jfif", 
+            "President13.jfif", 
+            "President14.jfif", 
+            "President15.jfif", 
+            "President16.jfif", 
+            "President17.jfif" 
+        ];
+        let lastImg = 0;
+        let img = document.getElementById("img");
+        let indicator = document.getElementById("indicator");
+
+        let filmshow = setInterval(function event() {
+            lastImg++;  // increment index
+            if (lastImg >= imgs.length) {
+                lastImg = 0;  // reset to 0 if index exceeds array length
+            }
+            img.src = imgs[lastImg];
+            indicator.textContent = `President-${lastImg + 1}`;
+        }, 1000);
+    </script>
+
+</body>
+</html>

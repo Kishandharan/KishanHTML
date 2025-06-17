@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains Mono">
+    <title>Permutations for 3 letter words</title>
+    <style>
+        *{
+            font-family: "JetBrains Mono";
+        }
+
+        label, #word, #submitBtn, #result{
+            font-size: 2rem;
+        }
+
+        #submitBtn{
+            border: 2px solid black;
+            cursor: pointer;
+            background-color: #fa5d02;
+            color: black;
+            border-radius: 10px;
+            transition: all 1s ease;  
+        }
+
+        #submitBtn:hover{
+            border: 2px solid white;
+            background-color: black;
+            color: #fa5d02;
+        }
+
+        #result{
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <label>Three letter word: </label>
+    <input id="word" maxlength="3"><br><br>
+    <button id="submitBtn">Submit</button>
+    <ol id="result">
+        
+    </ol>
+    <script>
+        let ol = document.getElementById("result");
+        let submitBtn = document.getElementById("submitBtn");
+        submitBtn.onclick = function event(){
+            let chars = document.getElementById("word").value.split("");
+            let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+            if(chars.every(function condition(char){ return letters.includes(char); })){
+                if(chars.length == 3){ // eat
+                    ol.innerHTML = "";
+                    ol.innerHTML += `<li>${chars[0]+chars[1]+chars[2]}</li>`;
+                    ol.innerHTML += `<li>${chars[0]+chars[2]+chars[1]}</li>`;
+                    ol.innerHTML += `<li>${chars[2]+chars[0]+chars[1]}</li>`;
+                    ol.innerHTML += `<li>${chars[2]+chars[1]+chars[0]}</li>`;
+                    ol.innerHTML += `<li>${chars[1]+chars[2]+chars[0]}</li>`;
+                    ol.innerHTML += `<li>${chars[1]+chars[0]+chars[2]}</li>`;
+                }else{
+                    if(chars.length == 1){ alert(`Oppsie pupsie! Looks like you have only have ${chars.length} letter! We need three!`); }
+                    else { alert(`Oppsie pupsie! Looks like you have only have ${chars.length} letters! We need three!`); }
+                    
+                }
+            }else{ alert(`Oppsie pupsie! Looks like you have non-letters in your word, we need only letters!`); }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <title>US presidents</title>
+    <style>
+        *{
+            font-family: "JetBrains Mono";
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #img{
+            width: 400px;
+            margin: 5px;
+            border-radius: 20px;
+        }
+        #prevImg, #nextImg{
+            font-size: 2rem;
+            border: none;
+            width: 100px;
+            padding: 5px;
+            border-radius: 10px;
+            margin-top: 6px;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+
+        #prevImg{
+            margin-right: 4px;
+        }
+
+        #prevImg:hover, #nextImg:hover{
+            background-color: #cccccc;
+        }
+        #indicator{
+            font-size: 4rem;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="indicator">President-1</p>
+    <img src="President1.jfif" id="img">
+    <div>
+        <button id="prevImg">&#8592;</button>
+        <button id="nextImg">&#8594;</button>
+    </div>
+    <script>
+        let indicator = document.getElementById("indicator");
+        let prevImg = document.getElementById("prevImg");
+        let nextImg = document.getElementById("nextImg");
+        let img = document.getElementById("img");
+        let lastImg = 0;
+        let presidents = [
+            "President1.jfif",
+            "President2.jfif",
+            "President3.jfif",
+            "President4.jfif",
+            "President5.jfif",
+            "President6.jfif",
+            "President7.jfif",
+            "President8.jfif",
+            "President9.jfif",
+            "President10.jfif",
+            "President11.jfif",
+            "President12.jfif",
+            "President13.jfif",
+            "President14.jfif",
+            "President15.jfif",
+            "President16.jfif",
+            "President17.jfif"
+        ];
+
+        prevImg.onclick = function event(){
+            if(lastImg > 0){
+                lastImg--;
+                indicator.textContent = `President-${lastImg+1}`;
+                img.src = presidents[lastImg];
+            }
+        }
+
+        nextImg.onclick = function event(){
+            if(lastImg < 16){
+                lastImg++;
+                indicator.textContent = `President-${lastImg+1}`;
+                img.src = presidents[lastImg];
+            }
+        }
+
+    </script>
+</body>
+</html>

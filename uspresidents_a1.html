@@ -3,50 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains Mono">
     <title>US Presidents</title>
     <style>
-        img{
-            transition: all 1s ease;
+        *{
+            font-family: JetBrains Mono;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav{
+            display: flex;
+            flex-direction: row;
+        }
+        #img{
+            margin: 5px;
             border-radius: 5px;
         }
-
-        img:hover{
-            box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.7); 
+        #presidentNumber{
+            margin: 2px;
+        }
+        #prevImg, #nextImg{
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+        #prevImg{
+            margin-right: 7px;
+        }
+        #prevImg:hover, #nextImg:hover{
+            background-color: #dbd9d9;
+        }
+        #indicator{
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President1.jfif')"><img src="President1.jfif"></td>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President2.jfif')"><img src="President2.jfif"></td>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President3.jfif')"><img src="President3.jfif"></td>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President4.jfif')"><img src="President4.jfif"></td>
-        </tr>
-        <tr>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President5.jfif')"><img src="President5.jfif"></td>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President6.jfif')"><img src="President6.jfif"></td>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President7.jfif')"><img src="President7.jfif"></td>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President8.jfif')"><img src="President8.jfif"></td>
-        </tr>
-        <tr>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President9.jfif')"><img src="President9.jfif"></td>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President10.jfif')"><img src="President10.jfif"></td>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President11.jfif')"><img src="President11.jfif"></td>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President12.jfif')"><img src="President12.jfif"></td>
-        </tr>
-        <tr>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President13.jfif')"><img src="President13.jfif"></td>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President14.jfif')"><img src="President14.jfif"></td>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President15.jfif')"><img src="President15.jfif"></td>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President16.jfif')"><img src="President16.jfif"></td>
-        </tr>
-        <tr>
-            <td onclick="location.assign('https://github.com/Kishandharan/HTML/blob/main/President17.jfif')"><img src="President17.jfif"></td>
-            <td class="gap"></td>
-            <td class="gap"></td>
-            <td class="gap"></td>
-        </tr>
-    </table>
+    <p id="indicator">President-1</p>
+    <img src="President1.jfif" id="img">
+    <div class="nav">
+        <button id="prevImg">&#8592;</button>
+        <button id="nextImg">&#8594;</button>
+    </div>
+    <script>
+        let imgs = [
+            "President1.jfif", 
+            "President2.jfif", 
+            "President3.jfif", 
+            "President4.jfif", 
+            "President5.jfif", 
+            "President6.jfif", 
+            "President7.jfif", 
+            "President8.jfif", 
+            "President9.jfif", 
+            "President10.jfif", 
+            "President11.jfif", 
+            "President12.jfif", 
+            "President13.jfif", 
+            "President14.jfif", 
+            "President15.jfif", 
+            "President16.jfif", 
+            "President17.jfif" 
+        ]
+        let lastImg = 0;
+        let prevImg = document.getElementById("prevImg");
+        let nextImg = document.getElementById("nextImg");
+        let output = document.getElementById("img");
+        let indicator = document.getElementById("indicator"); 
+        prevImg.onclick = function event(){
+            if(lastImg > 0){
+                lastImg--;
+                indicator.textContent = `President-${lastImg+1}`;
+                output.src = imgs[lastImg];
+            }
+        }
+        nextImg.onclick = function event(){
+            if(lastImg < 16){
+                lastImg++;
+                indicator.textContent = `President-${lastImg+1}`;
+                output.src = imgs[lastImg];
+            }
+        }
+    </script>
 </body>
 </html>

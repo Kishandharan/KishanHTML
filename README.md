@@ -342,7 +342,7 @@ reach the last president image.
 Create a web page where all the presidents images are shown as a film slide, cycling through the images by itself.
 We do not need any buttons here 
 
-# Assignment 11 - Permutation
+# Assignment 11 - Permutation (Without JS dynamicity)
 ## 11a 
 Create a web page where we take a 3 word input and the permutation for that word is shown as a numbered list.
 Add a submit button so that the user can pass the input to our web page, add some nice and smooth animations to the button too.
@@ -352,3 +352,9 @@ Now create a webpage similar to the previous one, but it shows permutations for 
 
 ## 11c
 Now create the exact same page as before but this has to only work with 5 letter words.
+
+
+# Assignment 11 - Permutation (With JS dynamicity)
+## 11a
+Create a web page that generates 4 letter word permutations, exactly like before, but here, dont hard code each
+permutation. Instead, use JS to generate the permutations using for loops.

@@ -358,3 +358,17 @@ Now create the exact same page as before but this has to only work with 5 letter
 ## 11a
 Create a web page that generates 4 letter word permutations, exactly like before, but here, dont hard code each
 permutation. Instead, use JS to generate the permutations using for loops.
+
+# Assignment 12 - Word building 
+## 12a 
+Create a word building game that works like the below:    
+First the user has to enter a word let's say "Eat".                                         
+Now the computer has to produce a word that starts with the ending of the user' word.                    
+Now the user again has to give a word that starts with the ending letter of the computer' word.                 
+And this pattern has to continue till the user loses.
+
+Player can lose if                                                                                                       
+1) Player gives non-English word                                                   
+2) Player gives word whose starting letter is not same as computer's word last letter 
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <title>Permutation</title>
+    <style>
+
+        :root{
+            --orange: #ff6400;
+        }
+
+        #word, #submitBtn, #result, label{
+            font-family: "JetBrains Mono";
+            font-size: 2rem;
+        }
+
+        #submitBtn{
+            background-color: var(--orange);
+            color: black;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s linear;
+        }
+
+        #submitBtn:hover{
+            color: var(--orange);
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <label>Four letter word:</label>
+    <input id="word" maxlength="4"><br><br>
+    <button id="submitBtn">Submit</button>
+    <ol id="result">
+        
+    </ol>
+    <script>
+        let word = document.getElementById("word");
+        let submitBtn = document.getElementById("submitBtn");
+        let result = document.getElementById("result");
+
+        function perm3(word){
+            let chars = word.split("");
+            return [
+                chars[0]+chars[1]+chars[2],
+                chars[0]+chars[2]+chars[1],
+                chars[1]+chars[0]+chars[2],
+                chars[1]+chars[2]+chars[0],
+                chars[2]+chars[0]+chars[1],
+                chars[2]+chars[1]+chars[0],
+            ];
+        }
+
+        function perm4(word){
+            let perms = [];
+            let temp = [];
+            let chars = word.split("");
+
+            // F-ast
+            // 0-123
+            temp = perm3( chars[1] + chars[2] + chars[3] );
+            for( let i = 0; i < 6; i++ ){
+                perms.push( chars[0] + temp[i] );
+            }
+            
+            // A-fst 
+            // 1-023                
+            temp = perm3( chars[0] + chars[2] + chars[3] );
+            for( let i = 0; i < 6; i++ ){
+                perms.push( chars[1] + temp[i] );
+            }
+
+            // s-fat 
+            // 2-013                
+            temp = perm3( chars[0] + chars[1] + chars[3] );
+            for( let i = 0; i < 6; i++ ){
+                perms.push( chars[2] + temp[i] );
+            }
+
+            // t-fas 
+            // 3-012                
+            temp = perm3( chars[0] + chars[1] + chars[2] );
+            for( let i = 0; i < 6; i++ ){
+                perms.push( chars[3] + temp[i] );
+            }
+            return perms;
+        }
+
+        submitBtn.onclick = function event(){
+            let permutations = perm4(word.value);
+            result.innerHTML = "";
+
+            for(let item of permutations){
+                result.innerHTML += `<li>${item}</li>`;
+            }
+        }        
+    </script>
+</body>
+</html>

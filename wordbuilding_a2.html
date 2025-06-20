@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
+    <title>Wordbuilding</title>
+    <style>
+        *{
+            font-size: 2rem;
+            font-family: "Roboto Mono";
+        }
+
+        :root{
+            --orange: #f54702;
+        }
+
+        td{
+            width: 300px;
+        }
+
+        #submitBtn{
+            background-color: var(--orange);
+            color: black;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s linear;
+        }
+
+        #submitBtn:hover{
+            background-color: black;
+            color: var(--orange);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>User</td>
+            <td><input id="user"></td>
+        </tr>
+        <tr>
+            <td>Comp</td>
+            <td><input id="comp" readonly></td>
+        </tr>
+    </table><br>
+    <button id="submitBtn">Submit</button>
+</body>
+</html>

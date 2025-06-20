@@ -371,4 +371,15 @@ Player can lose if
 1) Player gives non-English word                                                   
 2) Player gives word whose starting letter is not same as computer's word last letter 
 
+## 12b                                                                                      
+Now create the exact same web page as before, but with a little change in the rules.                                       
 
+Player can lose if                                                                                                            
+1) Player repeats same word the computer or the user themselves inputed previously                                
+2) Player gives non-English word                                                                 
+3) Player gives word whose starting letter is not same as computer's last word                                   
+
+Computer rules:                                        
+1) The computer should not repeat the same word the user or the it iteself outputed previously
+2) The computer should give only words present in a specific array of words
+3) The computer should give only words that start with the user's word ending letter

@@ -383,3 +383,6 @@ Computer rules:
 1) The computer should not repeat the same word the user or the it iteself outputed previously
 2) The computer should give only words present in a specific array of words
 3) The computer should give only words that start with the user's word ending letter
+
+## 12c 
+Now add a small button on the gameover and the userlost screen where we can see the history of the words typed.

@@ -15,7 +15,8 @@
             width: 300px;
         }
 
-        #submitBtn{
+        .theme1{
+            font-family: "JetBrains Mono";
             background-color: #eb6734;
             color: black;
             border-radius: 10px;
@@ -23,12 +24,17 @@
             cursor: pointer;
         }
 
-        #submitBtn:hover{
+        .theme1:hover{
             background-color: black;
             color: #eb6734;
         }
 
         #userlost, #gameover{
+            opacity: 0;
+            margin: 2px;
+        }
+
+        #history{
             opacity: 0;
             margin: 2px;
         }
@@ -46,10 +52,20 @@
                 <td><input id="comp" readonly></td>
             </tr>
         </table><br>
-        <button id="submitBtn">Submit</button>
+        <button id="submitBtn" class="theme1">Submit</button>
     </div>
-    <p id="userlost">You have lost the game</p>
-    <p id="gameover">Game over</p>
+    <div id="userlost">
+        <p>You have lost the game😔. Try again!</p>
+        <button id="showhis1" class="theme1">Show game history</button>
+    </div>
+    <div id="gameover">
+        <p>Game is over☺️!</p>
+        <button id="showhis2" class="theme1">Show game history</button>
+    </div>
+    <div id="history">
+    </div>
+        
+    </div>
     <script>
         const words = [
           // A words
@@ -1126,7 +1142,9 @@
 
         let submit1 = document.getElementById("submitBtn");
         let userlostelemnt = document.getElementById("userlost");
-
+        let history = document.getElementById("history");
+        let historyBtn1 = document.getElementById("showhis1");
+        let historyBtn2 = document.getElementById("showhis2");
         let count = 1;
         
         submit1.onclick = () => {
@@ -1135,6 +1153,8 @@
                 if(!(words.includes(userChoice.toLowerCase()))){
                     game.style.display = "none";
                     userlostelemnt.style.opacity = "1";
+                    used_words.push(userChoice);
+                    return;
                 }else{
                     let input1 = userChoice.split("")
                     userLastLetter = input1[input1.length - 1];
@@ -1158,12 +1178,18 @@
                     if(!(words.includes(userChoice.toLowerCase()))){
                         game.style.display = "none";
                         userlostelemnt.style.opacity = "1";
+                        used_words.push(userChoice);
+                        return;
                     }else if(userChoice[0].toLowerCase() != compLastLetter.toLowerCase()){
                         game.style.display = "none";
                         userlostelemnt.style.opacity = "1";
+                        used_words.push(userChoice);
+                        return;
                     }else if (used_words.includes(userChoice)){
                         game.style.display = "none";
                         userlostelemnt.style.opacity = "1";
+                        used_words.push(userChoice);
+                        return;
                     }else{
                         used_words.push(userChoice);
                         let input1 = userChoice.split("")
@@ -1185,12 +1211,39 @@
                 }else{
                     game.style.display = "none";
                     gameover.style.opacity = "1";
+                    return;
                 }
             }
         }
+        
+        historyBtn1.onclick = function event(){
+            gameover.style.display = "none";
+            userlostelemnt.style.display = "none";
+            history.innerHTML = "";
+            if(used_words.length < 1){
+                history.innerHTML += "No words!!";
+            }else{
+                for(let word of used_words){
+                    history.innerHTML += `${word}<br>`
+                }
+            }
 
+            history.style.opacity = "1";
+        }
+        historyBtn2.onclick = function event(){
+            gameover.style.display = "none";
+            userlostelemnt.style.display = "none";
+            history.innerHTML = "";
+            if(used_words.length < 1){
+                history.innerHTML += "No words!!";
+            }else{
+                for(let word of used_words){
+                    history.innerHTML += `${word}<br>`
+                }
+            }
 
-
+            history.style.opacity = "1";
+        }
     </script>
 </body>
 </html>

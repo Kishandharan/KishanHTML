@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table id="t1">
+    </table>    
+
+    <script>
+        let t1 = document.getElementById("t1");
+        t1.innerHTML += `
+        <tr id="row1"></tr>
+        <tr id="row2"></tr>
+        <tr id="row3"></tr>
+        <tr id="row4"></tr>
+        <tr id="row5"></tr>
+        `;
+
+        let row1 = document.getElementById("row1");
+        let row2 = document.getElementById("row2");
+        let row3 = document.getElementById("row3");
+        let row4 = document.getElementById("row4");
+        let row5 = document.getElementById("row5");
+        
+        for(let i = 1; i<=7; i++){
+            row1.innerHTML += `
+            <td>${i}</td>
+            `
+        }
+        for(let i = 8; i<=14; i++){
+            row2.innerHTML += `
+            <td>${i}</td>
+            `
+        }
+        for(let i = 15; i<=21; i++){
+            row3.innerHTML += `
+            <td>${i}</td>
+            `
+        }
+        for(let i = 22; i<=28; i++){
+            row4.innerHTML += `
+            <td>${i}</td>
+            `
+        }
+        for(let i = 29; i<=31; i++){
+            row5.innerHTML += `
+            <td>${i}</td>
+            `
+        }
+    </script>
+</body>
+</html>

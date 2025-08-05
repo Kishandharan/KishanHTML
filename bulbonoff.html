@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On Off showcase</title>
+</head>
+<body>
+    <img src="bulboff.gif" id="bulb_id1" width="200">
+    <script>
+        let bulb1 = document.getElementById("bulb_id1");
+        let bulbState = false;
+
+        bulb1.onclick = function event(){
+            if(bulbState == false){
+                bulb1.src = "bulbon.gif";
+                bulbState = true;
+            }else{
+                bulb1.src = "bulboff.gif";
+                bulbState = false;
+            }
+        }
+    </script>
+</body>
+</html>

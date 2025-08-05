@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        p{
+            font-size: 3rem;
+        }
+    </style>
 </head>
 <body>
     <p id="pwd"></p>
@@ -12,11 +17,13 @@
         let lowerletters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
         let upperletters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
         let all = [...numbers, ...upperletters, ...lowerletters];
-        let index1 = Math.floor(Math.random() * 36);
-        let index2 = Math.floor(Math.random() * 36);
-        let index3 = Math.floor(Math.random() * 36);
-        let pwd = all[index1] + all[index2] + all[index3];
-        //console.log(pwd);
+        let index1;
+        let pwd = "";
+        pwd = "";
+        for(let i = 0; i<8; i++){
+            index1=Math.floor(Math.random() * 62);
+            pwd+=all[index1];
+        }
         document.getElementById("pwd").textContent = pwd;
     </script>
 </body>

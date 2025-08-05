@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb on bulb off</title>
+    <style>
+        #bulb2_id{
+            font-weight: bold;
+            font-size: 50px;
+        }
+
+        #bulb1_id{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img src="bulbon.gif" width="200" id="bulb1_id">
+    <p id="bulb2_id">Bulb is on</p>
+    <script>
+        let bulb1 = document.getElementById("bulb1_id");
+        let bulb2 = document.getElementById("bulb2_id");
+        let bulbStatus = true;
+
+        bulb1.onclick = function event(){
+            if(bulbStatus==true){
+                bulbStatus=false;
+                bulb2.textContent = "Bulb is off";
+                bulb1.src = "bulboff.gif";
+            }else{
+                bulbStatus=true;
+                bulb2.textContent = "Bulb is on";
+                bulb1.src = "bulbon.gif";
+            }
+        } 
+    </script>
+</body>
+</html>

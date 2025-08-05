@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian flag</title>
+    <style>
+        .part1{
+            background-color: #ffa500;
+            width: 600px;
+            height: 150px;
+        }
+        .part2{
+            background-color: #ffffff;
+            width: 600px;
+            height: 150px;
+        }
+        .part3{
+            background-color: #008000;
+            width: 600px;
+            height: 150px;
+        }
+        .part2 img{
+            margin-left: 204px;
+            width: 190px;
+        }
+        body{
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="part1"></div>    
+    <div class="part2"><img id="ashokachakra" src="ashokachakra.png"></div>    
+    <div class="part3"></div>    
+
+    <script>
+        let ashokaChakra = document.getElementById("ashokachakra");
+        let ashokaChakraState = true;
+
+        ashokaChakra.onclick = function(){
+            if(ashokaChakraState == true){
+                ashokaChakraState = false;
+                ashokaChakra.style.opacity = "0.06";
+            }else{
+                ashokaChakraState = true;
+                ashokaChakra.style.opacity = "1";
+            }
+        }
+    </script>
+</body>
+</html>

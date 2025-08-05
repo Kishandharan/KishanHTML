@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
+    <title>Bulb On Off showcase</title>
+
+    <style>
+       *{
+           font-family: "Roboto Mono";
+           font-weight: bold;
+           font-size: 25px;
+       }
+
+       body{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+    </style>
+</head>
+<body>
+    <img src="bulboff.gif" id="bulb_id1">    
+    <p id="bulb_id2">Bulb is off</p>
+
+    <script>
+        let bulb1 = document.getElementById("bulb_id1");
+        let bulb2 = document.getElementById("bulb_id2");
+        let bulbState = false;
+
+        bulb1.onclick = function event(){
+            if(bulbState == false){
+
+                bulb1.src = "bulbon.gif";
+                bulb2.textContent = "Bulb is on";
+                bulbState = true;
+
+            }else{
+
+                bulb1.src = "bulboff.gif";
+                bulb2.textContent = "Bulb is off";
+                bulbState = false;
+
+            }
+        }
+    </script>
+</body>
+</html>

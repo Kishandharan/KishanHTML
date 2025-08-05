@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+</head>
+<body>
+    <script>
+        let numbers = "0123456789".split("");
+        let lowerletters = "abcdefghijklmnopqrstuvwxyz".split("");
+        let upperletters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+        let all = [...numbers, ...lowerletters, ...upperletters];
+        let pwd = "";
+        let index1 = 0;
+        for(let i = 0; i<20; i++){
+            index1 = Math.floor(Math.random() * all.length);
+            pwd+=all[index1];
+        }
+        console.log(pwd);
+    </script>    
+</body>
+</html>

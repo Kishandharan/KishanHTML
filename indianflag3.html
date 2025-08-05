@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">#
+    <title>Indian Tricolor Flag</title>
+    <style>
+        .part1{
+            background-color: #fc7703;
+            width: 600px;
+            height: 150px;
+        }
+
+        .part2{
+            width: 600px;
+            height: 150px;
+            background-color: white;
+        }
+
+        .part2 img{
+            margin-left: 200px;
+        }
+
+        .part3{
+            width: 600px;
+            height: 150px;
+            background-color: #52fa05;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="part1">
+                        
+        </div>
+        <div class="part2">
+            <img id="ashokachakra" src="ashokachakra.png" alt="">
+        </div>
+        <div class="part3">
+            
+        </div>
+    </div>    
+    <script>
+        let ashokachakra = document.getElementById("ashokachakra");
+        let showChakra=true;
+        ashokachakra.onclick = function event(){
+            if(showChakra==true){
+                showChakra=false;
+                ashokachakra.style.opacity = "0.1";
+            }else{
+                showChakra=true;
+                ashokachakra.style.opacity = "1";
+            }
+        }
+    </script>
+</body>
+</html>

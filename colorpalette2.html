@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette</title>
+</head>
+<body>
+    <table id="palette">
+        
+    </table>    
+    <script>
+        let palette = document.getElementById("palette");
+        let redShades = [
+            "rgb(255, 0, 0)", 
+            "rgb(179, 0, 0)", 
+            "rgb(134, 0, 0)", 
+            "rgb(105, 0, 0)", 
+            "rgb(69, 0, 0)",
+            "rgb(46, 0, 0)", 
+            "rgb(37, 0, 0)", 
+            "rgb(0, 0, 0)"
+        ];
+        let greenShades = [
+            "rgb(0, 255, 0)", 
+            "rgb(0, 179, 0)", 
+            "rgb(0, 134, 0)", 
+            "rgb(0, 105, 0)", 
+            "rgb(0, 69, 0)",
+            "rgb(0, 46, 0)", 
+            "rgb(0, 37, 0)", 
+            "rgb(0, 0, 0)"
+        ];
+        let blueShades = [
+            "rgb(0, 0, 255)", 
+            "rgb(0, 0, 179)", 
+            "rgb(0, 0, 134)", 
+            "rgb(0, 0, 105)", 
+            "rgb(0, 0, 69)",
+            "rgb(0, 0, 46)", 
+            "rgb(0, 0, 37)", 
+            "rgb(0, 0, 0)"
+        ];
+
+        let innerhtml1 = ""; 
+
+        // Eight shades of red 
+        innerhtml1+="<tr>";
+        for(let color of redShades){
+            innerhtml1 += `<td style="background-color: ${color}; width: 50px; height: 30px;">`;
+        }
+        innerhtml1 += "</tr>";
+
+        // Eight shades of green 
+        innerhtml1+="<tr>";
+        for(let color of greenShades){
+            innerhtml1 += `<td style="background-color: ${color}; width: 50px; height: 30px;">`;
+        }
+        innerhtml1 += "</tr>";
+
+            // Eight shades of blue 
+            innerhtml1+="<tr>";
+            for(let color of blueShades){
+                innerhtml1 += `<td style="background-color: ${color}; width: 50px; height: 30px;">`;
+            }
+            innerhtml1 += "</tr>";
+
+        palette.innerHTML += innerhtml1;
+
+    </script>
+</body>
+</html>

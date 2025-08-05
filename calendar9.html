@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        table{
+            background-color: black;
+        }
+        td{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr id="tr1">
+        </tr>
+    </table>    
+    <script>
+        let tr1 = document.getElementById("tr1");
+        let str1 = ``;
+        for(let i=1; i<=7; i++){
+            str1 += `<td>${i}</td>`;
+        }
+        console.log(str1);
+        tr1.innerHTML = str1;
+    </script>
+</body>
+</html>

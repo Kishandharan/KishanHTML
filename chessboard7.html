@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board</title>
+</head>
+<body>
+    <table id="chessboard"></table>    
+    <script>
+        let chessboard = document.getElementById("chessboard");
+        
+        chessboard.innerHTML += "<tr id='row1'></tr>";
+        let row1 = document.getElementById("row1");
+        
+        row1.innerHTML += "<td>a1</td>";
+        row1.innerHTML += "<td>a2</td>";
+        row1.innerHTML += "<td>a3</td>";
+        row1.innerHTML += "<td>a4</td>";
+        row1.innerHTML += "<td>a5</td>";
+        row1.innerHTML += "<td>a6</td>";
+        row1.innerHTML += "<td>a7</td>";
+        row1.innerHTML += "<td>a8</td>";
+    </script>
+</body>
+</html>

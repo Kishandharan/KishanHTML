@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        #timer{
+            font-size: 10rem;
+            border: 3px solid gray;
+            padding: 10px;
+            width: 450px;
+            height: 250px;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <p id="timer"></p>
+    <script>
+        let i = 10;
+        let timer = document.getElementById("timer");
+        let interval = setInterval(
+            function(){
+                i--;
+                timer.textContent = i;
+                if(i == 0){
+                    timer.textContent = "Done!";
+                    timer.style.color = "blue";
+                    clearInterval(interval);
+                }
+            },
+            1000
+        );
+    </script>
+</body>
+</html>

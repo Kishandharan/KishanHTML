@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><img src="seat1.svg"></td>
+            <td><img src="seat1.svg"></td>
+            <td><img src="seat1.svg"></td>
+        </tr>
+    </table>
+    <script>
+        let seats = document.getElementsByTagName("img");
+
+        for(let seat of seats){
+            seat.onclick = function(){
+                if(seat.getAttribute("src") == "seat1.svg"){
+                    seat.setAttribute("src","seat2.svg");
+                }else{
+                    seat.setAttribute("src","seat1.svg");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign your bus tickets here | Dodo bus</title>
+    <style>
+        .gap{
+            width: 55px;
+        }
+            
+        .table2{
+            border: 5px solid gray;
+        }
+
+        .table1{
+            margin: 15px;
+            width: 260px;
+        }
+        
+        .table1 td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table class="table1">
+        <tr>
+            <td><img src="seat1.svg"></td>
+            <td><img src="seat2.svg"></td>
+            <td><img src="seat3.svg"></td>
+        </tr>
+        <tr>
+            <td>Available</td>
+            <td>Selected</td>
+            <td>Occupied</td>
+        </tr>
+    </table>
+    <table class="table2">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><img src="steeringwheel.svg" width="45"></td>
+        </tr>
+        <tr>
+            <td><img src="seat3.svg"></td>
+                                                       
+            <td class="gap"></td>
+            
+            <td><img class="seat" src="seat1.svg"></td>
+            <td><img src="seat3.svg"></td>
+        </tr>
+        <tr>
+            <td><img class="seat" src="seat1.svg"></td>
+                                                       
+            <td class="gap"></td>
+            
+            <td><img class="seat" src="seat1.svg"></td>
+            <td><img class="seat" src="seat1.svg"></td>
+        </tr>
+        <tr>
+            <td><img class="seat" src="seat1.svg"></td>
+                                                       
+            <td class="gap"></td>
+            
+            <td><img class="seat" src="seat1.svg"></td>
+            <td><img class="seat" src="seat1.svg"></td>
+        </tr>
+        <tr>
+            <td><img class="seat" src="seat1.svg"></td>
+                                                       
+            <td class="gap"></td>
+            
+            <td><img class="seat" src="seat1.svg"></td>
+            <td><img class="seat" src="seat1.svg"></td>
+        </tr>
+        <tr>
+            <td><img class="seat" src="seat1.svg"></td>
+                                                       
+            <td class="gap"></td>
+            
+            <td><img class="seat" src="seat1.svg"></td>
+            <td><img class="seat" src="seat1.svg"></td>
+        </tr>
+        <tr>
+            <td><img class="seat" src="seat1.svg"></td>
+                                                       
+            <td class="gap"></td>
+            
+            <td><img class="seat" src="seat1.svg"></td>
+            <td><img class="seat" src="seat1.svg"></td>
+        </tr>
+        <tr>
+            <td><img class="seat" src="seat1.svg"></td>
+                                                       
+            <td class="gap"></td>
+            
+            <td><img class="seat" src="seat1.svg"></td>
+            <td><img class="seat" src="seat1.svg"></td>
+        </tr>
+    </table>
+    <script>
+        let seats = document.getElementsByClassName("seat");
+        for(let seat of seats){
+            seat.onclick = function(){
+                if(seat.getAttribute("src") == "seat1.svg"){
+                    seat.setAttribute("src", "seat2.svg");
+                }else{
+                    seat.setAttribute("src", "seat1.svg");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains Mono">
+    <title>Secure Pass | Password generator</title>
+    <style>
+        *{
+            font-family: "JetBrains Mono";
+        }
+
+        .theme1{
+            width: 1100px;
+        }
+
+        .theme1 td{
+            font-size: 2rem;
+        }
+        
+        .theme1 input{
+            font-size: 2rem;
+            border: 4px solid black;
+        }
+
+        #submit_btn{
+            font-size: 2rem;
+            margin-top: 40px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <table class="theme1">
+        <tr>
+            <td>Password Quantity</td>
+            <td><input type="text" id="pwd_qty"></td>
+        </tr>
+        <tr>
+            <td>Password Size</td>
+            <td><input type="text" id="pwd_size"></td>
+        </tr>
+    </table>
+    <button id="submit_btn">Submit</button>
+    <ol id="pwd_list"></ol>
+        
+    <script>
+        function genPwd(size){
+            let arr1 = "abcdefghijklmnopqrstuvwxyz".split("");
+            let arr2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+            let arr3 = "1234567890".split("");
+            let master1 = [...arr1, ...arr2, ...arr3];
+            let pwd = "";
+
+            for(let i = 0; i<size; i++){
+                let rand1 = Math.floor(Math.random() * master1.length);
+                pwd += master1[rand1];
+            }
+
+            return pwd;
+        }
+
+        let input1 = document.getElementById("pwd_qty"); // Quantity
+        let input2 = document.getElementById("pwd_size"); // Size
+        let btn1 = document.getElementById("submit_btn"); // Submit button
+        let ol1 = document.getElementById("pwd_list"); // Ol
+
+        btn1.onclick = function(){
+            for(let i = 0; i<input1.value; i++){
+                ol1.innerHTML += `<li></li>`;
+            }
+        }
+    </script>
+</body>
+</html>

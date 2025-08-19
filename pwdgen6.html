@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Bob | Password generator</title>
+    <style>
+        #btn1{
+            background-color: #03fcec;
+            color: black;
+            border-radius: 4px;
+            border: 2px solid black;
+            transition: 1s ease;
+        }
+        #btn1:hover{
+            background-color: black;
+            color: #03fcec;
+        }
+    </style>
+</head>
+<body>
+    <p id="pwd"></p>
+    <button id="btn1">Generate a password</button>
+    <script>
+        function genpass(size){
+            let arr1 = "abcdefghijklmnopqrstuvwxyz".split("");
+            let arr2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+            let arr3 = "1234567890".split("");
+
+            let master_arr = [...arr1, ...arr2, ...arr3];
+            let pwd = "";
+            let rand1;
+
+            for(let i = 0; i<size; i++){
+                rand1 = Math.floor(Math.random() * master_arr.length);
+                pwd += master_arr[rand1]; 
+            }
+
+            return pwd;
+        }
+
+        document.getElementById("btn1").onclick = function(){
+            let pwd = genpass(10);
+            document.getElementById("pwd").textContent = pwd;
+        };
+    </script>
+</body>
+</html>

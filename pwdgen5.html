@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Bob | Password generator</title>
+</head>
+<body>
+    <script>
+        let arr1 = "abcdefghijklmnopqrstuvwxyz".split("");
+        let arr2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+        let arr3 = "1234567890".split("");
+
+        let rand1 = Math.floor(Math.random() * arr1.length);
+        let rand2 = Math.floor(Math.random() * arr2.length);
+        let rand3 = Math.floor(Math.random() * arr3.length);
+
+        let pwd = arr1[rand1] + arr2[rand2] + arr3[rand3];
+        
+        console.log(pwd);
+
+    </script>
+</body>
+</html>

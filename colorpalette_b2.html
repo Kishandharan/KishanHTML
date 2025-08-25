@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SangamOne Color Picker</title>
+    <style>
+        .tb1{
+            width: 700px;
+            margin-bottom: 20px;
+        }
+        .tb1 *, #submitBtn{
+            font-size: xx-large;
+        }
+        #colorbox{
+            background-color: red;
+            display: inline-block;
+            width: 100px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <table class="tb1">
+        <tr>
+            <td>R</td>
+            <td><input type="number" id="r"></td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td><input type="number" id="g"></td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td><input type="number" id="b"></td>
+        </tr>
+    </table>
+    <button id="submitBtn">Submit</button>
+    <div id="colorbox"></div>
+
+    <script src="colorpalette_b2.js"></script>
+</body>
+</html>

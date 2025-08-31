@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d viewer</title>
+    <style>
+        #flatplane{
+            background-color: skyblue;
+            width: 300px;
+            height: 300px;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            padding: 10px;
+            border-radius: 16px;
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+
+        body{
+            transform-style: preserve-3d;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            perspective:  300px;
+        }
+        #controls{
+            margin-top: 10px;
+            display: flex;
+            gap: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="flatplane">
+        This is a flatplane
+    </div>
+    <div id="controls">
+        <button id="axisX+">Axis X +</button>
+        <button id="axisX-">Axis X -</button>
+        <button id="axisY+">Axis Y +</button>
+        <button id="axisY-">Axis Y -</button>
+        <button id="axisZ+">Axis Z +</button>
+        <button id="axisZ-">Axis Z -</button>
+    </div>
+    <script>
+        let xp = document.getElementById("axisX+");
+        let xm = document.getElementById("axisX-");
+        let yp = document.getElementById("axisY+");
+        let ym = document.getElementById("axisY-");
+        let zp = document.getElementById("axisZ+");
+        let zm = document.getElementById("axisZ-");
+        let fp = document.getElementById("flatplane");
+
+        let lastXdeg = 0;
+        let lastYdeg = 0;
+        let lastZdeg = 0;
+
+        xp.onclick = () => {
+            lastXdeg += 5;
+            fp.style.transform = `rotateX(${lastXdeg}deg) rotateY(${lastYdeg}deg) rotateZ(${lastZdeg}deg)`;
+        }
+
+        xm.onclick = () => {
+            lastXdeg -= 5;
+            fp.style.transform = `rotateX(${lastXdeg}deg) rotateY(${lastYdeg}deg) rotateZ(${lastZdeg}deg)`;
+        }
+
+        yp.onclick = () => {
+            lastYdeg += 5;
+            fp.style.transform = `rotateX(${lastXdeg}deg) rotateY(${lastYdeg}deg) rotateZ(${lastZdeg}deg)`;
+        }
+
+        ym.onclick = () => {
+            lastYdeg -= 5;
+            fp.style.transform = `rotateX(${lastXdeg}deg) rotateY(${lastYdeg}deg) rotateZ(${lastZdeg}deg)`;
+        }
+
+        zp.onclick = () => {
+            lastZdeg += 5;
+            fp.style.transform = `rotateX(${lastXdeg}deg) rotateY(${lastYdeg}deg) rotateZ(${lastZdeg}deg)`;
+        }
+
+        zm.onclick = () => {
+            lastZdeg -= 5;
+            fp.style.transform = `rotateX(${lastXdeg}deg) rotateY(${lastYdeg}deg) rotateZ(${lastZdeg}deg)`;
+        }
+    </script>
+</body>
+</html>

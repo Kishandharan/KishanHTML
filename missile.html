@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missile lock ON</title>
+    <style>
+        #missile{
+            animation: launch 0.2s linear infinite;
+        }
+
+        @keyframes launch{
+            0%{transform: translateX(0px) rotate(90deg);}
+            100%{transform: translateX(5000px) rotate(90deg);}
+        }
+    </style>
+</head>
+<body>
+    <img src="missile.png" id="missile"> 
+</body>
+</html>

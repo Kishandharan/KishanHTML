@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <title>Dippy color picker</title>
+    <style>
+        *{
+            font-family: "Open Sans";
+        }
+
+        .tb1{
+            width: 700px;
+            margin-bottom: 20px;
+        }
+
+        .tb1 *, #submitBtn{
+            font-size: xx-large;
+        }
+
+        #colorbox{
+            width: 100px;
+        } 
+    </style>
+</head>
+<body>
+    <table class="tb1">
+        <tr>
+            <td>R</td>
+            <td><input type="number" id="r"></td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td><input type="number" id="g"></td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td><input type="number" id="b"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td><button id="submitBtn">Submit</button></td>
+            <td id="colorbox"></td>
+        </tr>
+    </table>
+
+    <script>
+        let colorbox = document.getElementById("colorbox");
+        let submitBt = document.getElementById("submitBtn");
+        let r = document.getElementById("r");
+        let g = document.getElementById("g");
+        let b = document.getElementById("b");
+
+        submitBt.onclick = function(){
+            let red = r.value;
+            let grn = g.value;
+            let blu = b.value;
+            colorbox.style.backgroundColor = `rgb(${red}, ${grn}, ${blu})`;
+        }
+    </script>
+</body>
+</html>

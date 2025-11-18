@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram Setu</title>
+    <style>
+        .circle{
+            border-radius: 50%;
+            border: 4px solid black;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">1</div>
+    <div class="circle">2</div>
+    <div class="circle">3</div>
+    <div class="circle">4</div>
+    <br>
+    <button>Stop</button>
+    <button>Next</button>
+
+    <script>
+        let circles = document.getElementsByClassName("circle");
+        for(let circle of circles){
+            circle.onclick = function(){
+                if(circle.style.backgroundColor != "orange"){
+                    circle.style.backgroundColor = "orange";
+                }else{
+                    circle.style.backgroundColor = "white";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

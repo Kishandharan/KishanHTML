@@ -8,10 +8,12 @@
 <body>
     <p></p>    
     <script>
-        let data;
+        async function start1(){
+            let data1 = await fetch('http://45.79.126.196:5000/words/getAll');
+            console.log(data1);
+        }
 
-        fetch('http://45.79.126.196:5000/words/getAll')
-            .then(response => console.log(response));
+        start1();
     </script>
 </body>
 </html>

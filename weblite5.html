@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Stack Sans Notch">
+    <title>Weblite5</title>
+    <style>
+        *{
+            font-family: "stack sans notch";
+            text-align: center;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .theme1{
+            border: 1px solid grey;
+            padding: 10px;
+            width: 800px;
+            margin: 7px;
+            border-radius: 10px;
+            transition: 200ms ease;
+        }
+        
+        .theme1:hover{
+            transform: scale(1.04);
+        }
+
+        .theme2{
+            text-decoration: underline;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        h1{
+            margin: 10px;
+            font-size: 3rem;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Posts</h1>
+    <div id="root">
+        
+    </div>    
+    <script>
+        async function start(){
+            let root1 = document.getElementById("root");
+            let apiData1 = await fetch("https://jsonplaceholder.typicode.com/posts"); 
+            let apiData2 = await apiData1.json();
+
+            for(let i of apiData2){
+                root1.innerHTML += `
+                    <div class="theme1">
+                        <p class="theme2">${i.title}</p>
+                        <p>
+                            ${i.body}
+                        </p>
+                    </div>
+                `;
+            }
+
+            console.log(apiData2);
+        }
+
+        start();
+    </script>
+</body>
+</html>

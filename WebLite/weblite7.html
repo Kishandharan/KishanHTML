@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
+    <title>Current weather</title>
+    <style>
+        *{
+            font-family: "Roboto Mono";
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .root{
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 300px;
+            max-height: 400px;
+            background-image: linear-gradient(to bottom, #fabe93, #fa756b);
+            padding: 6px;
+        }
+
+        p{
+            margin: 5px;
+            font-weight: bold;
+        }
+
+        input{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <h1>Weather</h1>
+        <p id="dis1"></p>
+        <p id="dis2"></p>
+        <p id="dis3"></p>
+        <p id="dis4"></p>
+        <input placeholder="Enter City Name" id="inp1">
+        <button id="inp2">Get Weather</button>
+    </div>
+    <script>
+        
+        let inp1 = document.getElementById("inp1");
+        let inp2 = document.getElementById("inp2");
+        let dis1 = document.getElementById("dis1"); // City Name
+        let dis2 = document.getElementById("dis2"); // Temperature
+        let dis3 = document.getElementById("dis3"); // Feels Like
+        let dis4 = document.getElementById("dis4"); // Humidity
+        
+        inp2.onclick = async function fetchApiData(){
+            let data1 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inp1.value}&appid=8c9146347b74c434e336935064daa2af&units=metric`);
+            let data2 = await data1.json();
+            if(data2.cod != "404"){
+                dis1.innerText = `City Name: ${data2["name"]}`;
+                dis2.innerText = `Temperature: ${data2["main"]["temp"]} C`;
+                dis3.innerText = `Feels Like: ${data2["main"]["feels_like"]} C`;
+                dis4.innerText = `Humidity: ${data2["main"]["humidity"]}%`;
+            }else{
+                dis1.innerText = "Oops! Sorry but a 404 error occured...";
+                dis2.innerText = "";
+                dis3.innerText = "";
+                dis4.innerText = "";
+            }
+        }            
+        
+        
+    </script>
+</body>
+</html>

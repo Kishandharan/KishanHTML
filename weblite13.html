@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebLite12</title>
+    <style>
+        *{
+            font-family: Arial;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .class1{
+            text-align: center;
+        }
+
+        #id1{
+            font-size: 1.7rem;
+        }
+
+        #id2{
+            background-color: #1567eb;
+            color: white;            
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 2rem;
+            transition: 300ms ease;
+            cursor: pointer;
+        }
+
+        #id2:hover{
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="class1">
+        <p id="id1"></p>
+        <button id="id2">Generate Joke</button>        
+    </div>
+    <script>
+        async function main(){
+            let url1 = "https://v2.jokeapi.dev/joke/Programming?type=single&amount=1";
+            
+            let id1 = document.getElementById("id1");
+            let id2 = document.getElementById("id2");
+
+            id2.onclick = async function () {
+                let dat1 = await fetch(url1);
+                let dat2 = await dat1.json();
+                let jok1 = dat2["joke"];
+                id1.innerHTML = jok1;
+            };
+        }
+        main();
+    </script>    
+</body>
+</html>

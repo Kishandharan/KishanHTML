@@ -1,0 +1,25 @@
+*{
+    font-family: Roboto Mono;
+    user-select: none;
+    color: white;
+}
+
+body{
+    background-color: #0D0221;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    display: block;
+    font-size: 1.6rem;
+    text-decoration: none;
+    background-color: #3280fc;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 6px;
+    width: 400px;
+    text-align: center;
+}

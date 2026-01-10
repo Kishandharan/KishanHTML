@@ -1,14 +1,17 @@
-*{
+* {
     font-family: Roboto Mono;
     user-select: none;
 }
 
-body{
-    background-color: #0D0221;
+body {
+    background-color: #0d0221;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.nav-bar{
+.nav-bar {
     border: 2px solid white;
     border-radius: 10px;
     display: flex;
@@ -18,7 +21,7 @@ body{
     justify-content: center;
 }
 
-.nav-bar-item{
+.nav-bar-item {
     color: white;
     transition: 100ms ease;
     font-weight: bold;
@@ -27,16 +30,31 @@ body{
     border-radius: 5px;
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
 }
 
-p{
+p {
     color: #05fcb6;
 }
 
-.nav-bar-item:hover{
+.lg {
+    width: 500px;
+}
+
+.tlg {
+    font-size: 1.5rem;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.nav-bar-item:hover {
     transform: scale(1.1);
 }
 
+h1 {
+    color: white;
+}

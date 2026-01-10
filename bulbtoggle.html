@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bulb Toggle</title>
+  </head>
+  <body>
+    <img src="bulboff.gif" id="id1">  
+    <br>
+    <button id="id2">Toggle Image</button>
+    <script>
+      let id1 = document.getElementById("id1");
+      let id2 = document.getElementById("id2");
+      let state1 = false;
+      id2.onclick = function (){
+        if(state1 == false){
+          id1.src = "bulbon.gif";
+          state1 = true;
+        }else{
+          id1.src = "bulboff.gif";
+          state1 = false;
+        }
+      };
+    </script>
+  </body>
+</html>

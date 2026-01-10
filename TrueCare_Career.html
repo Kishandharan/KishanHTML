@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | TrueCare Nidhi Ltd</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        :root {
+            --primary-blue: #003366;
+            --accent-gold: #DAA520;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+            --success-green: #28a745;
+        }
+
+        nav {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .logo span {
+            color: var(--primary-blue);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 1.1rem
+        }
+
+        .hero {
+            
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); 
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background-color: var(--accent-gold);
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #c59310;
+        }
+
+        .section {
+            padding: 60px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-blue);
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        .jobs-container {
+            overflow-x: auto;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .btn-sm {
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+
+        .form-container {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.6); 
+            animation: fadeIn 0.4s;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .success-icon {
+            font-size: 50px;
+            color: var(--success-green);
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0} 
+            to {opacity: 1}
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 40px 10% 20px;
+            text-align: center;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .section { padding: 40px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">TrueCare <span>Nidhi Ltd</span></div>
+        <div class="nav-links">
+            <!--<a href="#">Home</a>-->
+            <!--<a href="#">About Us</a>-->
+            <a href="#" class="active">Careers</a>
+            <a href="vision-mission.html">Vision & Mission</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Join the TrueCare Family</h1>
+        <p>Secure Your Future While Helping Others Build Theirs.</p>
+        <a href="#jobs" class="btn">View Current Openings</a>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">Why Build a Career With Us?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>📈 Career Growth</h3>
+                <p>We prioritize career growth and self development with appropriate on-the-job training</p>
+            </div>
+            <div class="benefit-card">
+                <h3>🛡️ Job Stability</h3>
+                <p>Work in a regulated, secure financial environment with a company that values long-term relationships.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>🤝 Inclusive Culture</h3>
+                <p>Join a team that treats every member with respect. We believe in transparency and teamwork.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>🏆 Performance Rewards</h3>
+                <p>Competitive salaries and growth potential for high performers </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #e9eff5;">
+        <h2 class="section-title">Our Core Values</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p><strong>Integrity:</strong> We handle public (members) money; Honesty is non-negotiable.</p>
+            <br>
+            <p><strong>Service:</strong> We treat every public (members) with patience and respect.</p>
+            <br>
+            <p><strong>Transparency:</strong> Clear communication with staff and public (members) alike.</p>
+        </div>
+    </section>
+
+    <section class="section" id="jobs">
+        <h2 class="section-title">Current Openings</h2>
+        <div class="jobs-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Role Title</th>
+                        <th>Location</th>
+                        <th>Required Qualifications</th>
+                        <th>Experience</th>
+                        <th>Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Customer Relationship Executive</td>
+                        <td>Thiruvankulam Branch</td>
+                        <td>Any Degree</td>
+                        <td>0-3 Years</td>
+                        <td>Full-Time</td>
+                        <td><a href="#apply" class="btn btn-sm">Apply Now</a></td>
+                    </tr>
+                    <tr>
+                        <td>Customer Relationship Executive</td>
+                        <td>North Paravur Branch</td>
+                        <td>Any Degree</td>
+                        <td>0-3 Years</td>
+                        <td>Full-Time</td>
+                        <td><a href="#apply" class="btn btn-sm">Apply Now</a></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+
+    <section class="section" id="apply">
+        <h2 class="section-title">Apply / Drop Your CV</h2>
+        <div class="form-container">
+            <form id="applicationForm">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="name@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">Position Applying For</label>
+                    <select id="position">
+                        <option value="">Select a role...</option>
+                        <option value="manager">Branch Manager</option>
+                        <option value="cre">Customer Relationship Executive</option>
+                        <option value="other">Other / General Application</option>
+                    </select>
+                <div class="form-group">
+                    <label for="Location">Location Applying For</label>
+                    <select id="Location">
+                        <option value=""> Select the Branch </option>
+                        <option value="HO">Thiruvankulam Branch</option>
+                        <option value="NP">North Paravur Branch</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="resume">Upload Resume (PDF/Doc)</label>
+                    <input type="file" id="resume">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Info</label>
+                    <textarea id="message" rows="4" placeholder="Tell us briefly about yourself..."></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Send Application</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <h3>TrueCare Nidhi Ltd</h3>
+        <p>Helpline: +91-9995253789 </p>
+        <p>Email: truecarenidhi@gmail.com</p>
+        <br>
+        <p>&copy; 2026 TrueCare Nidhi Ltd. All Rights Reserved.</p>
+    </footer>
+
+    <div id="thankyoumsg" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="success-icon">✓</div>
+            <h2>Application Received!</h2>
+            <p style="font-size: 1.1rem; margin-top: 10px;">Thank you for applying to TrueCare Nidhi Ltd.</p>
+            <p style="color: #666; font-size: 0.95rem; margin-top: 10px;">Our HR team will review your biodata and contact you if your profile matches our requirements.</p>
+            <br>
+            <button class="btn" id="closeModalBtn">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Get the elements
+        const form = document.getElementById('applicationForm');
+        const modal = document.getElementById('thankyoumsg');
+        const closeSpan = document.getElementsByClassName("close-btn")[0];
+        const closeBtn = document.getElementById("closeModalBtn");
+
+        // When the form is submitted
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop the page from reloading/refreshing
+            
+            // Here is where you would normally send the data to a server
+            // For now, we just show the popup
+            
+            modal.style.display = "block";
+            form.reset(); // Clear the form fields
+        });
+
+        // Close when clicking the (x)
+        closeSpan.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close when clicking the Close button
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close when clicking outside the box
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

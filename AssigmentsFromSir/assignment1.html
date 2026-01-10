@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+  </head>
+  <body>
+    <img src="dog.webp" alt="" width="300" id="bark">
+    <img src="cat.jpg" alt="" width="300" id="meow">
+    <audio id="barkAud" src="./bark.mp3"></audio>
+    <audio id="meowAud" src="./meow.mp3"></audio>
+    <script>
+      let barkBtn = document.getElementById("bark");
+      let meowAud = document.getElementById("meow");
+      let barkAud = document.getElementById("barkAud");
+      let meowAud = document.getElementById("meowAud");
+      
+      barkBtn.onclick = function (){
+        barkAud.play();
+      }
+      meowBtn.onclick = function (){
+        meowAud.play();
+      }
+    </script>
+  </body>
+</html>

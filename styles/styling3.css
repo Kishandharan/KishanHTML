@@ -1,14 +1,18 @@
 *{
-    font-family: Roboto Mono;
+    font-family: "Arial";
     user-select: none;
-    color: white;
+    color: #003366;
 }
 
 body{
-    background-color: #0D0221;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.colorwhite{
+  color: white;
 }
 
 a{

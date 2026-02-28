@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Website</title>
+    <style>
+      *{
+        font-family: Arial;
+      }
+      body{
+        text-align: center;
+      }
+      p, button{
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      p{
+        margin: 20px;
+      }
+
+      button{
+        background-color: #4d64fa;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 6px;
+        cursor: pointer;
+        transition: .5s ease;
+      }
+
+      button:hover{
+        background-color: #2843f7;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">Hello</p>
+    <button id="btn1">Change</button>
+    <script>
+      let btn1 = document.getElementById("btn1");      
+      let p1 = document.getElementById("p1");
+      btn1.onclick = function(){
+        if(p1.textContent == "Hello"){
+          p1.textContent = "Bye";
+        }else{
+          p1.textContent = "Hello";
+        }
+      }
+    </script>
+  </body>
+</html>

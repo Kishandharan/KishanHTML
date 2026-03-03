@@ -201,7 +201,7 @@ Add an id to ashokachakra image, to make it toggle onclick. Use script tag to wr
 ## 1c
 Add a button, onclick it should play the national anthem. Use "audio" tag of HTML 5. And use the resource
 [National-Anthem-India](https://github.com/Kishandharan/KishanHTML/blob/main/March2026/National-Anthem-India.mp3)
-[ashokachakra][https://github.com/Kishandharan/KishanHTML/blob/main/March2026/ashokachakra.png]    
+[ashokachakra](https://github.com/Kishandharan/KishanHTML/blob/main/March2026/ashokachakra.png)
 
 ## 1d
 Button should dissapear after first click and when the audio starts playing.    
@@ -220,6 +220,16 @@ width="200" can be changed to increase or decrease the size of the image.
 ## 2b 
 Modify the HTML page to show an additional text within the p tag. "Bulb is on" or "Bulb is off".
 Use p id="bulb_id2">Bulb is off p. bulb_id2 will be the id of the text corresponding to the bulb state.
+
+## 2c 
+Center the entire page using flexbox
+
+## 2d 
+Make the page remember the last state of the bulb per computer, even after the browser closing 
+and refreshing.
+
+## 2e 
+Add some hovering effects to the toggle button so that It looks much less boring.
 
 # Assignment 3 - Calendar 2025
 ## 3a 

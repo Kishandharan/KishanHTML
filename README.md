@@ -198,6 +198,15 @@ Below is an example:
 Build a HTML page showing the [Indian flag](https://kishandharan.github.io/HTML/indianflag.html) with red white green rectangular areas with an image of an ashoka chakra using the tags head, body, style, title, img, div. Use image [ashokachakra.png](https://github.com/Kishandharan/HTML/blob/main/ashokachakra.png). Use class attribute to decorate each rectangular div element with required dimensions. Example width=600px height=150px and required color.
 ## 1b    
 Add an id to ashokachakra image, to make it toggle onclick. Use script tag to write a function that accesses the opacity CSS value and conditionally make it visible or hidden based on a boolean flag showChakra=true/false. Use document.getElementById() method to access the required DOM elements.
+## 1c
+Add a button, onclick it should play the national anthem. Use "audio" tag of HTML 5. And use the resource
+[National-Anthem-India](https://github.com/Kishandharan/KishanHTML/blob/main/March2026/National-Anthem-India.mp3)
+[ashokachakra][https://github.com/Kishandharan/KishanHTML/blob/main/March2026/ashokachakra.png]    
+
+## 1d
+Button should dissapear after first click and when the audio starts playing.    
+Find a way to stop the audio without necessarily refreshing.
+
 
 
 # Assignment 2 - Bulb on, Bulb off

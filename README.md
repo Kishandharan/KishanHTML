@@ -233,12 +233,58 @@ Add some hovering effects to the toggle button so that It looks much less boring
 
 # Assignment 3 - Calendar 2025
 ## 3a 
-Build a HTML page showing the calendar for [Jan 2025](https://kishandharan.github.io/HTML/calendar1.html).
-Use table, tr, td tags. To show sunday in red color, add class="red" and include it's properties within style tag as color:red;
-Use attributes width, height to adjust the dimensions of td tag and table tag.
-Set the background color of the table to black and set the background color of td tag to white to create a border.
+Create a Jan 2026 calendar. Hardcode all the values using pure HTML.    
+Make the table background color black and the th and tg tag background white to create a border;
+Add some padding inside the th and td tags to make it sparser and less dense.    
+Use a caption tag to add the label "Jan 2026" right above the table. The caption tag should be inside the table,    
+and above all the tr tags. 
 
 ## 3b 
+Do the same table, but for all months in 2026. Add one table for each month.     
+Add some margin around the table to make it sparse. 
+
+## 3c
+Now use JS to just print 1 to the number of days in a month in new lines. No need for day names.    
+The output should look something like: 
+
+
+```
+Jan 2026 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
+15 
+16 
+17 
+18 
+19 
+20 
+21 
+22 
+23 
+24 
+25 
+26 
+27 
+28 
+29 
+30
+31 
+```
+
+Just like the above for each month.
+
 
 # Assignment 4 - Simple Chess Board
 ## 4a 

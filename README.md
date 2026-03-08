@@ -300,6 +300,11 @@ Use classes color1 and color2 to apply the color for each square.
 ## 4b 
 Now add the appropriate pieces using the unicode values of the chess pieces from [this website](https://www.alt-codes.net/chess-symbols.php).
 
+## 4c
+Now, take a set of moves (at least 2) and then change the content on each cell to make the pieces move. 
+Add next and previous buttons to move forward or backward in that set of moves. 
+Also make everything centered using flexbox
+
 # Assignment 5 - Simple Countdown timer
 ## 5a 
 Create a Simple timer which counts from 10 to 0 in seconds.

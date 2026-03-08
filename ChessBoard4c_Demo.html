@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChessBoard 4c</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .dark {
+      background-color: #ffcd9e;
+    }
+
+    .light {
+      background-color: #d18b47;
+    }
+
+    .fancybutton {
+      background-color: #2d7dfc;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-family: Arial;
+      font-weight: bold;
+      padding: 6px;
+      margin-top: 10px;
+      width: 109px;
+      cursor: pointer;
+      transition: 0.1s ease;
+    }
+
+    .fancybutton:hover {
+      transform: scale(1.04);
+      background-color: #0a68fc;
+    }
+
+    td {
+      font-size: 2rem;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    table {
+      background-color: black;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td class="light" id="sq1">&#9820;</td>
+      <td class="dark" id="sq2">&#9822;</td>
+      <td class="light" id="sq3">&#9821;</td>
+      <td class="dark" id="sq4">&#9819;</td>
+      <td class="light" id="sq5">&#9818;</td>
+      <td class="dark" id="sq6">&#9821;</td>
+      <td class="light" id="sq7">&#9822;</td>
+      <td class="dark" id="sq8">&#9820;</td>
+    </tr>
+    <tr>
+      <td class="dark" id="sq9">&#9823;</td>
+      <td class="light" id="sq10">&#9823;</td>
+      <td class="dark" id="sq11">&#9823;</td>
+      <td class="light" id="sq12">&#9823;</td>
+      <td class="dark" id="sq13">&#9823;</td>
+      <td class="light" id="sq14">&#9823;</td>
+      <td class="dark" id="sq15">&#9823;</td>
+      <td class="light" id="sq16">&#9823;</td>
+    </tr>
+    <tr>
+      <td class="light" id="sq17"> </td>
+      <td class="dark" id="sq18"> </td>
+      <td class="light" id="sq19"> </td>
+      <td class="dark" id="sq20"> </td>
+      <td class="light" id="sq21"> </td>
+      <td class="dark" id="sq22"> </td>
+      <td class="light" id="sq23"> </td>
+      <td class="dark" id="sq24"> </td>
+    </tr>
+    <tr>
+      <td class="dark" id="sq25"> </td>
+      <td class="light" id="sq26"> </td>
+      <td class="dark" id="sq27"> </td>
+      <td class="light" id="sq28"> </td>
+      <td class="dark" id="sq29"> </td>
+      <td class="light" id="sq30"> </td>
+      <td class="dark" id="sq31"> </td>
+      <td class="light" id="sq32"> </td>
+    </tr>
+    <tr>
+      <td class="light" id="sq33"> </td>
+      <td class="dark" id="sq34"> </td>
+      <td class="light" id="sq35"> </td>
+      <td class="dark" id="sq36"> </td>
+      <td class="light" id="sq37"> </td>
+      <td class="dark" id="sq38"> </td>
+      <td class="light" id="sq39"> </td>
+      <td class="dark" id="sq40"> </td>
+    </tr>
+    <tr>
+      <td class="dark" id="sq41"> </td>
+      <td class="light" id="sq42"> </td>
+      <td class="dark" id="sq43"> </td>
+      <td class="light" id="sq44"> </td>
+      <td class="dark" id="sq45"> </td>
+      <td class="light" id="sq46"> </td>
+      <td class="dark" id="sq47"> </td>
+      <td class="light" id="sq48"> </td>
+    </tr>
+    <tr>
+      <td class="light" id="sq49">&#9817;</td>
+      <td class="dark" id="sq50">&#9817;</td>
+      <td class="light" id="sq51">&#9817;</td>
+      <td class="dark" id="sq52">&#9817;</td>
+      <td class="light" id="sq53">&#9817;</td>
+      <td class="dark" id="sq54">&#9817;</td>
+      <td class="light" id="sq55">&#9817;</td>
+      <td class="dark" id="sq56">&#9817;</td>
+    </tr>
+    <tr>
+      <td class="dark" id="sq57">&#9814;</td>
+      <td class="light" id="sq58">&#9816;</td>
+      <td class="dark" id="sq59">&#9815;</td>
+      <td class="light" id="sq60">&#9813;</td>
+      <td class="dark" id="sq61">&#9812;</td>
+      <td class="light" id="sq62">&#9815;</td>
+      <td class="dark" id="sq63">&#9816;</td>
+      <td class="light" id="sq64">&#9814;</td>
+    </tr>
+  </table>
+  <div>
+    <button class="fancybutton" id="nextBtn">Next</button>
+    <button class="fancybutton" id="prevBtn">Prev</button>
+  </div>
+  <script>
+    let count = 0;
+    let nextBtn = document.getElementById("nextBtn");
+    let prevBtn = document.getElementById("prevBtn");
+
+    function handleBoard(count) {
+      let squares = [];
+      let pieces = {
+        "king_white": "&#9812;",
+        "queen_white": "&#9813;",
+        "rook_white": "&#9814;",
+        "bishop_white": "&#9815;",
+        "knight_white": "&#9816;",
+        "pawn_white": "&#9817;",
+        "king_black": "&#9818;",
+        "queen_black": "&#9819;",
+        "rook_black": "&#9820;",
+        "bishop_black": "&#9821;",
+        "knight_black": "&#9822;",
+        "pawn_black": "&#9823;"
+      };
+      for (let i = 1; i <= 64; i++) {
+        squares.push(document.getElementById(`sq${i}`));
+      }
+      switch (count) {
+        case 0:
+          squares[52].innerHTML = "&#9817 ";
+          squares[44].innerHTML = " ";
+          break;
+        case 1:
+          squares[52].innerHTML = " ";
+          squares[44].innerHTML = "&#9817";
+          break;
+      }
+    }
+
+    nextBtn.onclick = function handleNext() {
+      if (!(count + 1 > 1)) {
+        count++;
+        handleBoard(count);
+      }
+    }
+
+    prevBtn.onclick = function handlePrev() {
+      if (!(count - 1 < 0)) {
+        count--;
+        handleBoard(count);
+      }
+    }
+  </script>
+</body>
+
+</html>

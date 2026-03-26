@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="input1">
+  <button id="button1">submit</button>
+  <div id="name"></div>
+  <script>
+    let dict1 = ["aardvark", "beam", "carpet", "darpet"];
+    let in1 = document.getElementById("input1");
+    let btn1 = document.getElementById("button1");
+    let comp1score = 0;
+    let youscore = 0;
+    btn1.onclick = function next() {
+      let posi = in1.value.length - 1;
+      let name = in1.value.charAt(posi);
+      for (let i = 0; i < dict1.length; i++) {
+        if (name == dict1[i][0]) {
+          let comp1 = dict1[i].length;
+          let you = in1.value.length;
+          s1 = in1.value + "-" + dict1[i] + "-> " + "(" + comp1 + "-" + you + ")";
+          document.getElementById("name").innerHTML += `<p>${s1}</p>`;
+          comp1score = comp1score + comp1;
+          youscore = youscore + you;
+          //console.log(comp1score);
+          //console.log(youscore);
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

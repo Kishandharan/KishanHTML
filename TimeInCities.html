@@ -83,7 +83,7 @@
     let part2 = "";
 
     function timeCalc() {
-      date1.setUTCHours(date1.getUTCHours() - 8);
+      date1.setUTCHours(date1.getUTCHours() - 7);
       part1 = date1.getUTCHours().toString();
       part2 = date1.getUTCMinutes().toString();
       elm_time1.textContent = part1.padStart(2, "0") + ":" + part2.padStart(2, "0");

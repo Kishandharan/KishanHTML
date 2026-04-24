@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <title></title>
+</head>
+
+<body>
+  <div class="container">
+    <table class="table">
+      <tr>
+        <th>City Name</th>
+        <th>Time</th>
+      </tr>
+      <tr>
+        <td>San Francisco</td>
+        <td id="time1"></td>
+      </tr>
+      <tr>
+        <td>New York</td>
+        <td id="time2"></td>
+      </tr>
+      <tr>
+        <td>London</td>
+        <td id="time3"></td>
+      </tr>
+      <tr>
+        <td>Dubai</td>
+        <td id="time4"></td>
+      </tr>
+      <tr>
+        <td>Banglore</td>
+        <td id="time5"></td>
+      </tr>
+      <tr>
+        <td>Singapore</td>
+        <td id="time6"></td>
+      </tr>
+      <tr>
+        <td>Tokyo</td>
+        <td id="time7"></td>
+      </tr>
+      <tr>
+        <td>Sydney</td>
+        <td id="time8"></td>
+      </tr>
+      <tr>
+        <td>Wellington</td>
+        <td id="time9"></td>
+      </tr>
+      <tr>
+        <td>UTC</td>
+        <td id="time10"></td>
+      </tr>
+    </table>
+  </div>
+  <script>
+    const elm_time1 = document.getElementById("time1");
+    const elm_time2 = document.getElementById("time2");
+    const elm_time3 = document.getElementById("time3");
+    const elm_time4 = document.getElementById("time4");
+    const elm_time5 = document.getElementById("time5");
+    const elm_time6 = document.getElementById("time6");
+    const elm_time7 = document.getElementById("time7");
+    const elm_time8 = document.getElementById("time8");
+    const elm_time9 = document.getElementById("time9");
+    const elm_time10 = document.getElementById("time10");
+    const date1 = new Date();
+    const date2 = new Date();
+    const date3 = new Date();
+    const date4 = new Date();
+    const date5 = new Date();
+    const date6 = new Date();
+    const date7 = new Date();
+    const date8 = new Date();
+    const date9 = new Date();
+    const date10 = new Date();
+    let part1 = "";
+    let part2 = "";
+
+    date1.setUTCHours(date1.getUTCHours() - 8);
+    part1 = date1.getUTCHours().toString();
+    part2 = date1.getUTCMinutes().toString();
+    elm_time1.textContent = part1.padStart(2, "0") + ":" + part2.padStart(2, "0");
+
+    date2.setUTCHours(date2.getUTCHours() - 4);
+    part1 = date2.getUTCHours().toString();
+    part2 = date2.getUTCMinutes().toString();
+    elm_time2.textContent = part1.padStart(2, "0") + ":" + part2.padStart(2, "0");
+
+    date3.setUTCHours(date3.getUTCHours() + 1);
+    part1 = date3.getUTCHours().toString();
+    part2 = date3.getUTCMinutes().toString();
+    elm_time3.textContent = part1.padStart(2, "0") + ":" + part2.padStart(2, "0");
+
+    date4.setUTCHours(date4.getUTCHours() + 4);
+    part1 = date4.getUTCHours().toString();
+    part2 = date4.getUTCMinutes().toString();
+    elm_time4.textContent = part1.padStart(2, "0") + ":" + part2.padStart(2, "0");
+
+    date5.setUTCHours(date5.getUTCHours() + 5, date5.getUTCMinutes() + 30);
+    part1 = date5.getUTCHours().toString();
+    part2 = date5.getUTCMinutes().toString();
+    elm_time5.textContent = part1.padStart(2, "0") + ":" + part2.padStart(2, "0");
+
+    date6.setUTCHours(date6.getUTCHours() + 8);
+    part1 = date6.getUTCHours().toString();
+    part2 = date6.getUTCMinutes().toString();
+    elm_time6.textContent = part1.padStart(2, "0") + ":" + part2.padStart(2, "0");
+
+    date7.setUTCHours(date7.getUTCHours() + 9);
+    part1 = date7.getUTCHours().toString();
+    part2 = date7.getUTCMinutes().toString();
+    elm_time7.textContent = part1.padStart(2, "0") + ":" + part2.padStart(2, "0");
+
+    date8.setUTCHours(date8.getUTCHours() + 10);
+    part1 = date8.getUTCHours().toString();
+    part2 = date8.getUTCMinutes().toString();
+    elm_time8.textContent = part1.padStart(2, "0") + ":" + part2.padStart(2, "0");
+
+    date9.setUTCHours(date9.getUTCHours() + 12);
+    part1 = date9.getUTCHours().toString();
+    part2 = date9.getUTCMinutes().toString();
+    elm_time9.textContent = part1.padStart(2, "0") + ":" + part2.padStart(2, "0");
+
+    date10.setUTCHours(date10.getUTCHours() + 0);
+    part1 = date10.getUTCHours().toString();
+    part2 = date10.getUTCMinutes().toString();
+    elm_time10.textContent = part1.padStart(2, "0") + ":" + part2.padStart(2, "0");
+  </script>
+</body>
+
+</html>

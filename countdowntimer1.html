@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown Timer</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 5rem;
+      margin-top: 10px;
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p id="p1">10</p>
+
+  <script>
+    let count1 = 10;
+    const display1 = document.getElementById("p1");
+
+    const interval1 = setInterval(() => {
+      count1--;
+      display1.textContent = count1;
+
+      if (count1 === 0) {
+        clearInterval(interval1);
+      }
+    }, 1000);
+  </script>
+
+</body>
+
+</html>

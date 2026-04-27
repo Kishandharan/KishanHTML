@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+</head>
+
+<body>
+  <span>Banglore: </span>
+  <span id="time1"></span>
+
+  <script>
+    const tm1 = document.getElementById("time1");
+    const dt1 = new Date();
+    let str1 = "";
+
+    function getTime() {
+      str1 = dt1.getHours().toString() + ":" + dt1.getMinutes().toString() + ":" + dt1.getSeconds().toString();
+      tm1.textContent = str1;
+    }
+
+    getTime();
+  </script>
+</body>
+
+</html>

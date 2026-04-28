@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    td {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <table id="palette1">
+  </table>
+  <script>
+    const palette1 = document.getElementById("palette1");
+    let result = "";
+    let r = 0;
+    let g = 0;
+    let b = 0;
+
+    for (let j = 0; j < 16; j++) {
+      result += "<tr>"
+      for (let i = 0; i < 16; i++) {
+        r = Math.floor(Math.random() * 256);
+        g = Math.floor(Math.random() * 256);
+        b = Math.floor(Math.random() * 256);
+        result += "<td ";
+        result += "style='background-color: rgb(";
+        result += r.toString() + ",";
+        result += g.toString() + ",";
+        result += b.toString() + ");";
+        result += "'></td>";
+      }
+      result += "</tr>"
+    }
+
+    palette1.innerHTML += result;
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Math Quiz 1</title>
+  <style>
+    #end1 {
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container1">
+    <h1 id="question1"></h1>
+    <input id="answer1" type="number" placeholder="Type your answer here">
+    <button id="submit1">Sumbit</button>
+  </div>
+  <div id="end1">
+    <h1>Congrats for finishing the test. You have scored <span id="score"></span> marks</h1>
+    <ol id="list1">
+    </ol>
+  </div>
+
+  <script>
+    let count1 = -1;
+    let score1 = 0;
+
+
+    const count2 = 2;
+    const data1 = [
+      {type: "question", question: "What is the HCF of 8 and 18?", answer: "2"},
+      {type: "question", question: "What is 2 to the power 5?", answer: "32"},
+      {type: "end"}
+    ];
+
+    const qus1 = document.getElementById("question1");
+    const ans1 = document.getElementById("answer1");
+    const sub1 = document.getElementById("submit1");
+    const cnt1 = document.getElementById("container1");
+    const scr1 = document.getElementById("score1");
+    const lst1 = document.getElementById("list1");
+    const end1 = document.getElementById("end1");
+
+    function updateQuestions() {
+      count1++;
+      question1.textContent = data1[count1]["question"];
+    }
+
+    updateQuestions();
+    sub1.onclick = function handle1() {
+      if (data1[count1]["type"] == "end") {
+        cnt1.style.display = "none";
+        end1.style.opacity = "1";
+        return;
+      }
+      if (answer1.value == data1[count1]["answer"]) {
+        score1 += 2;
+        lst1.innerHTML += `<li>Q${count1 + 1} - 2</li>`;
+        scr1.textContent += score1.toString();
+        updateQuestions();
+        return;
+      }
+
+      lst1.innerHTML += `<li style="color: #FF0000;">Q${count1} - 0`;
+      updateQuestions();
+    }
+  </script>
+</body>
+
+</html>

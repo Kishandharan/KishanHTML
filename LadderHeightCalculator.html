@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    * {
+      font-family: Arial;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Ladder height Calculator</h1>
+  <label></label>
+  <table style="width: 400px;">
+    <tr>
+      <td>Height to reach: </td>
+      <td><input type="number" id="height"></td>
+    </tr>
+    <tr>
+      <td>Wall-to-Ladder Distance: </td>
+      <td><input type="number" id="baseDistance"></td>
+    </tr>
+  </table>
+  <button id="submit">Submit</button><br>
+  <p id="result"></p>
+
+  <script>
+    const height = document.getElementById("height");
+    const baseDistance = document.getElementById("baseDistance");
+    const submit = document.getElementById("submit");
+    const result = document.getElementById("result");
+
+    // Using the Pythagoras Theorem to calculate the required ladder height
+    submit.onclick = function handle() {
+      const ladderHeight = Math.sqrt((Number(height.value) ** 2) + (Number(baseDistance.value) ** 2));
+      result.textContent = `Required Ladder Length: ${ladderHeight}`;
+    }
+  </script>
+</body>
+
+</html>

@@ -9,6 +9,18 @@
     #end1 {
       opacity: 0;
     }
+
+    body {
+      text-align: center;
+    }
+
+    * {
+      font-family: Arial;
+    }
+
+    p {
+      margin: 4px;
+    }
   </style>
 </head>
 
@@ -19,9 +31,9 @@
     <button id="submit1">Sumbit</button>
   </div>
   <div id="end1">
-    <h1>Congrats for finishing the test. You have scored <span id="score"></span> marks</h1>
-    <ol id="list1">
-    </ol>
+    <h1>Congrats for finishing the test. You have scored <span id="score1"></span> marks</h1>
+    <div id="list1">
+    </div>
   </div>
 
   <script>
@@ -51,20 +63,21 @@
 
     updateQuestions();
     sub1.onclick = function handle1() {
-      if (data1[count1]["type"] == "end") {
+      if (data1[count1 + 1]["type"] == "end") {
         cnt1.style.display = "none";
         end1.style.opacity = "1";
-        return;
+        //return;
       }
       if (answer1.value == data1[count1]["answer"]) {
         score1 += 2;
-        lst1.innerHTML += `<li>Q${count1 + 1} - 2</li>`;
-        scr1.textContent += score1.toString();
+        lst1.innerHTML += `<p>Q${count1 + 1} - 2</p>`;
+        scr1.textContent = score1.toString();
         updateQuestions();
+        answer1.value = "";
         return;
       }
 
-      lst1.innerHTML += `<li style="color: #FF0000;">Q${count1} - 0`;
+      lst1.innerHTML += `<p style="color: #FF0000;">Q${count1} - 0</p>`;
       updateQuestions();
     }
   </script>

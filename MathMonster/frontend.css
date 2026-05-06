@@ -1,0 +1,25 @@
+*{
+  font-family: Arial;
+}
+
+body{
+  text-align: center;
+}
+
+#title{
+  font-size: 3rem;
+  margin: 10px;
+}
+
+#answer{
+  font-size: 2rem;
+}
+
+#submit{
+  background-color: #bdbdbd;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 1.5rem;
+}

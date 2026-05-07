@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Convert Km to Miles and Vice Versa</title>
+</head>
+
+<body>
+  <input id="input1" type="number">
+  <button id="button1">Submit</button>
+  <p id="output1"></p>
+  <p id="output2"></p>
+
+  <script>
+    const input1 = document.getElementById("input1");
+    const output1 = document.getElementById("output1");
+    const output2 = document.getElementById("output2");
+    const submit1 = document.getElementById("button1");
+
+    submit1.onclick = function handleClick() {
+      let value1 = Number(input1.value);
+
+      output1.textContent = `Miles to Km: ${value1 * 1.609}`;
+      output2.textContent = `Km to Miles: ${value1 / 1.609}`;
+    }
+  </script>
+</body>
+
+</html>

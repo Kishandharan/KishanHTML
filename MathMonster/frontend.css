@@ -6,20 +6,33 @@ body{
   text-align: center;
 }
 
-#title{
+#question{
   font-size: 3rem;
-  margin: 10px;
+  margin: 20px;
 }
 
 #answer{
-  font-size: 2rem;
+  font-size: 1.8rem;
+  width: 500px;
+  margin-bottom: 6px;
+  padding: 5px;
 }
 
 #submit{
-  background-color: #bdbdbd;
+  background-color: #d9d9d9; 
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   font-weight: bold;
-  padding: 5px;
-  font-size: 1.5rem;
+  padding: 7px;
+  font-size: 2rem;
+  width: 508px;
+  transition: 200ms ease;
+}
+
+#submit:hover{
+  transform: scale(1.03);
+}
+
+#end{
+  opacity: 1;
 }

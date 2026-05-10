@@ -21,7 +21,8 @@ let count = 0;
 let points = 0;
 let limit = dataset["cap"];
 question.textContent = dataset["questions"][0]["q"];
-submit.onclick = function handleClick(){
+
+function handle() {
   if(count+1 < limit){
     if(answer.value === dataset["questions"][count]["a"]){
       points+=10;
@@ -29,6 +30,7 @@ submit.onclick = function handleClick(){
     }else{
       points+=0;
       history.innerHTML += `<p style="color: #FF0000;">Q${count+1} - 0</p>`;
+      alert("Oops! Incorrect answer!");
     }
   }else{
       if(answer.value === dataset["questions"][count]["a"]){
@@ -37,6 +39,7 @@ submit.onclick = function handleClick(){
       }else{
         points+=0;
         history.innerHTML += `<p style="color: #FF0000;">Q${count+1} - 0</p>`;
+        alert("Oops! Incorrect answer!");
       }
       main.style.display = "none";
       end.style.opacity = "1";
@@ -44,4 +47,12 @@ submit.onclick = function handleClick(){
   }
   count++;
   question.textContent = dataset["questions"][count]["q"];
+  answer.value = "";
 }
+
+submit.onclick = handle;
+answer.addEventListener("keydown", function (event){
+  if(event.key == "Enter"){
+    handle();
+  }
+});

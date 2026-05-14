@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expense Tracker</title>
+</head>
+
+<body>
+  <label>Enter item name: </label>
+  <input id="itemName" type="text"><br>
+  <label>Enter price of the item: </label>
+  <input id="price" type="number"><br>
+  <button id="submit">Submit</button>
+  <p id="totalExpense"></p>
+
+  <script>
+    const itemName = document.getElementById("itemName");
+    const price = document.getElementById("price");
+    const submit = document.getElementById("submit");
+    const totalExpense = document.getElementById("totalExpense");
+    let total = 0;
+
+    submit.onclick = function handle() {
+      total += Number(price.value);
+      totalExpense.textContent = "Total expense " + total.toString();
+    }
+  </script>
+</body>
+
+</html>
